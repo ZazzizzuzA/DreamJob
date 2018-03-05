@@ -1,0 +1,34 @@
+{
+  "name": "frontpage",
+  "version": "1.0.0",
+  "description": "Job of my dream",
+  "main": "index.js",
+  "scripts": {
+    "dist": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZazzizzuzA/FrontPage.git"
+  },
+  "author": "Michael P",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ZazzizzuzA/FrontPage/issues"
+  },
+  "homepage": "https://github.com/ZazzizzuzA/FrontPage#readme",
+  "dependencies": {
+    "css-loader": "^0.28.10",
+    "eslint": "^4.18.2",
+    "eslint-loader": "^2.0.0",
+    "file-loader": "^1.1.11",
+    "html-webpack-plugin": "^3.0.4",
+    "jquery": "^3.3.1",
+    "node-sass": "^4.7.2",
+    "pug": "^2.0.0-rc.4",
+    "pug-loader": "^2.3.0",
+    "style-loader": "^0.20.2",
+    "sw-precache-webpack-plugin": "^0.11.4",
+    "url-loader": "^1.0.1",
+    "webpack": "^4.1.0"
+  }
+}
