@@ -1,0 +1,9 @@
+$first_black: #212121;
+$first_white: #E3F2FD;
+@mixin margin($vertical, $horizontal) {
+    margin: $vertical $horizontal;
+}
+
+@mixin padding($vertical, $horizontal) {
+    padding: $vertical $horizontal;
+}

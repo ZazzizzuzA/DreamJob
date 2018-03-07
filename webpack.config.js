@@ -11,7 +11,7 @@ module.exports = {
         path: path.resolve(__dirname, "dist"),
     },
     resolve: {
-        extensions: [".js", ".json", ".scss"],
+        extensions: [".js", ".json", ".scss", ".css"],
         alias: {
             src: path.join(__dirname, "src"),
             img: path.join(__dirname, "assets", "img")

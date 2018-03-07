@@ -1,2 +1,2 @@
-import "./styles/styles";
-console.log("Hello");
+import './styles/styles';
+import "./modules/demo4.js";
