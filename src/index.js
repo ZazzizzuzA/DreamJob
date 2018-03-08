@@ -1,2 +1,3 @@
 import './styles/styles';
-import "./modules/demo4.js";
+import "./modules/demo4";
+import "./modules/menu";
