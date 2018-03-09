@@ -7,6 +7,13 @@
             span
             span
             span
+        div.item__exchangeRates
+            div
+                p <span>{{exchangeRates[51].cc}}</span> : {{exchangeRates[51].rate}}
+            div     
+                p <span>{{exchangeRates[59].cc}}</span> : {{exchangeRates[59].rate}}
+            div
+                p <span>{{exchangeRates[3].cc}}</span> : {{exchangeRates[3].rate}}
         transition
             div.block__menu(v-show="show" name="slide")
                 ul
@@ -39,18 +46,22 @@ export default {
           },
           ],
           show: false,
+          exchangeRates: []
       }
   },
   methods: {
-      openMenu: function() {
+    openMenu: function() {
             let icon = document.getElementById('nav-icon');
             icon.classList.toggle('open');
             this.show = !this.show;
-    }
+    },
+    getExchangeRates: function(url = "https://bank.gov.ua/NBUStatService/v1/statdirectory/exchange?json") {
+        return fetch(url).then( response => response.json() ).then( json => this.exchangeRates = json );
+        }
   },
-  mounted() {
-
-  }
+    created: function() {
+    this.getExchangeRates()
+  },
 }
 </script>
 
@@ -157,7 +168,7 @@ export default {
     width: 15%;
     background-color: $bg_light_white;
     color: #1B5E20;
-    @include padding(70px, 5px);
+    @include padding(60px, 5px);
     ul{
         text-align: center;
         li{
@@ -175,6 +186,25 @@ export default {
 }
 .v-enter, .v-leave-to {
     transform: translateY(calc(-100% - 120px) );
+}
+.item__exchangeRates{
+    box-sizing: border-box;
+    width: 30%; 
+    border: 1px groove #004D40;
+    background-color: #039BE5;
+    text-align: center;
+    @include padding(0px, 5px);
+    margin-left: 80px;
+    div{
+        display: inline-block;
+    }
+        p{
+            margin: 0px;
+            @include padding(5px, 10px);
+            span{
+                font-weight: 700;
+            }
+        }
 }
 </style>
 
