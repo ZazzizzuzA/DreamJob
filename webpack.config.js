@@ -11,8 +11,9 @@ module.exports = {
         path: path.resolve(__dirname, "dist"),
     },
     resolve: {
-        extensions: [".js", ".json", ".scss", ".css"],
+        extensions: [".js", ".json", ".scss", ".css", ".vue"],
         alias: {
+            vue: "vue/dist/vue.min",
             src: path.join(__dirname, "src"),
             img: path.join(__dirname, "assets", "img")
         }
@@ -42,6 +43,12 @@ module.exports = {
                 },
                 loader: "url-loader"
             },
+            {
+                test: /\.vue$/,
+                use: [
+                    { loader: "vue-loader" }
+                ]
+            }
         ]
     },
     plugins: [

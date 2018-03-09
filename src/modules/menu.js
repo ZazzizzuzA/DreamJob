@@ -1,7 +1,4 @@
-var $ = require("jQuery");
-$(document).ready(function() {
-    $('#nav-icon').click(function() {
-        $(this).toggleClass('open');
-        // $(this).toggleClass('close');
-    });
-});
+let icon = document.getElementById('nav-icon');
+icon.onclick = () => {
+    icon.classList.toggle('open');
+}
