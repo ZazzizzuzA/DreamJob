@@ -89,6 +89,7 @@ export default {
     -moz-transition: .5s ease-in-out;
     -o-transition: .5s ease-in-out;
     transition: .5s ease-in-out;
+    z-index: 99999;
     cursor: pointer;
     span {
         display: block;

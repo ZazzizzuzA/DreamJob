@@ -8,6 +8,7 @@
  * Copyright 2017, Codrops
  * http://www.codrops.com
  */
+
 import anime from 'animejs';
 import charming from 'charming';
 const imagesLoaded = require('imagesloaded'); {
