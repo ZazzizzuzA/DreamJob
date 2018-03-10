@@ -1,3 +1,107 @@
 @import '_var';
 @import '_reset';
-@import 'demo';
+@import 'intro';
+html {
+    -ms-overflow-style: none;
+     ::-webkit-scrollbar {
+        width: 0;
+    }
+}
+
+.content--fixed {
+    background-color: var(--color-content-fixed);
+    display: flex;
+    flex-flow: column nowrap;
+    box-sizing: border-box;
+    .block {
+        display: none;
+        flex: 1 1 auto;
+        width: 100%;
+        box-sizing: border-box;
+        background: $bg_light_white;
+    }
+    .about-me {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url(../../assets/images/bg4.jpg);
+        height: 100vh;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        @include padding(20px, 10px);
+        .about-me_item {
+            height: 500px;
+            width: 50%;
+            @include padding(20px, 10px);
+            background: $bg_light_white;
+        }
+    }
+    .about-job {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url(../../assets/images/about-job.jpg);
+        width: 100%;
+        justify-content: flex-end;
+        align-items: center;
+        @include padding(50px, 20px);
+        .about-job_item {
+            height: 500px;
+            width: 70%;
+            @include padding(20px, 10px);
+            background: $bg_light_green;
+        }
+    }
+    .skills {
+        display: flex;
+        background-color: #FFE082;
+        width: 100%;
+        justify-content: center;
+        @include padding(50px, 20px);
+        flex-flow: row wrap;
+    }
+    .wishes {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url(../../assets/images/about-job.jpg);
+        width: 100%;
+        justify-content: flex-end;
+        align-items: center;
+        @include padding(50px, 20px);
+        .wishes_item {
+            height: 500px;
+            width: 70%;
+            @include padding(20px, 10px);
+            background: $bg_light_green;
+        }
+    }
+    .demands {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url(../../assets/images/about-job.jpg);
+        width: 100%;
+        justify-content: flex-end;
+        align-items: center;
+        @include padding(50px, 20px);
+        .demands_item {
+            height: 500px;
+            width: 70%;
+            @include padding(20px, 10px);
+            background: $bg_light_green;
+        }
+    }
+    .contacts {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url(../../assets/images/about-job.jpg);
+        width: 100%;
+        justify-content: flex-end;
+        align-items: center;
+        @include padding(50px, 20px);
+        .contacts_item {
+            height: 500px;
+            width: 70%;
+            @include padding(20px, 10px);
+            background: $bg_light_green;
+        }
+    }
+}

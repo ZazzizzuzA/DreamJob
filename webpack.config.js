@@ -15,7 +15,6 @@ module.exports = {
         alias: {
             vue: "vue/dist/vue.min",
             src: path.join(__dirname, "src"),
-            img: path.join(__dirname, "assets", "img")
         }
     },
     watch: true,

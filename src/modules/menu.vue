@@ -8,12 +8,7 @@
             span
             span
         div.item__exchangeRates
-            div
-                p <span>{{exchangeRates[51].cc}}</span> : {{exchangeRates[51].rate}}
-            div     
-                p <span>{{exchangeRates[59].cc}}</span> : {{exchangeRates[59].rate}}
-            div
-                p <span>{{exchangeRates[3].cc}}</span> : {{exchangeRates[3].rate}}
+                p( v-for="rate in exchangeRates" ) <span>{{rate.cc}}</span> : {{rate.rate}}
         transition
             div.block__menu(v-show="show" name="slide")
                 ul
@@ -56,8 +51,19 @@ export default {
             this.show = !this.show;
     },
     getExchangeRates: function(url = "https://bank.gov.ua/NBUStatService/v1/statdirectory/exchange?json") {
-        return fetch(url).then( response => response.json() ).then( json => this.exchangeRates = json );
-        }
+        return fetch(url).then( response => response.json() )
+        
+        .then( json => {
+            let arrJson = [];
+            for (var i = 0; i < json.length; i++ ) {
+                if ( json[i].cc == "RUB" || json[i].cc == "USD" || json[i].cc == "EUR") {
+                    arrJson.push(json[i]);
+                }
+            }
+             this.exchangeRates = arrJson
+        });
+
+    }
   },
     created: function() {
     this.getExchangeRates()
@@ -169,6 +175,7 @@ export default {
     background-color: $bg_light_white;
     color: #1B5E20;
     @include padding(60px, 5px);
+    z-index: 99999;
     ul{
         text-align: center;
         li{
@@ -188,23 +195,23 @@ export default {
     transform: translateY(calc(-100% - 120px) );
 }
 .item__exchangeRates{
+    position: absolute;
     box-sizing: border-box;
     width: 30%; 
     border: 1px groove #004D40;
     background-color: #039BE5;
     text-align: center;
     @include padding(0px, 5px);
-    margin-left: 80px;
-    div{
+    left: 80px;
+    top: 0px;
+    p{
         display: inline-block;
-    }
-        p{
-            margin: 0px;
-            @include padding(5px, 10px);
-            span{
-                font-weight: 700;
-            }
+        margin: 0px;
+        @include padding(5px, 10px);
+        span{
+            font-weight: 700;
         }
+    }
 }
 </style>
 

@@ -32,6 +32,8 @@ const imagesLoaded = require('imagesloaded'); {
         if (loaded) return;
         loaded = true;
 
+        document.getElementsByClassName('content--fixed')[0].style = "height: 100%";
+        Array.from(document.getElementsByClassName('block')).forEach(function(item) { item.style = "display: flex;" });
         anime({
             targets: DOM.intro,
             translateY: {

@@ -1,6 +1,18 @@
 $first_black: #212121;
 $first_white: #E3F2FD;
-$bg_light_white: #e6eac970;
+$bg_light_white: #e6eac980;
+$bg_light_green: rgba(129, 199, 132, 0.74);
+.demo {
+    --color-text: #4b2cf2;
+    --color-link: #ec2525;
+    --color-link-hover: #fff;
+    --color-enter: #4b2cf2;
+    --color-title: #ffffff;
+    --color-subtitle: #880E4F;
+    --color-content: linear-gradient(0.1turn, #283593, #1E88E5, #D500F9);
+    --font-alt: 400 5vw/1 'Poppins', serif;
+}
+
 @mixin margin($vertical, $horizontal) {
     margin: $vertical $horizontal;
 }
