@@ -31,9 +31,6 @@ export default {
               name: "Пожелания"
           },
           {
-              name: "Требования"
-          },
-          {
               name: "Мои навыки"
           },
           {
@@ -89,8 +86,9 @@ export default {
     -moz-transition: .5s ease-in-out;
     -o-transition: .5s ease-in-out;
     transition: .5s ease-in-out;
-    z-index: 99999;
     cursor: pointer;
+    transition: all 1s linear;
+    opacity: 0;
     span {
         display: block;
         position: absolute;

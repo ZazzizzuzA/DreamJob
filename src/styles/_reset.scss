@@ -5,4 +5,10 @@ ol {
     margin: 0;
     padding: 0;
     font-size: 16px;
+    font-family: 'Cormorant', serif;
+}
+
+@font-face {
+    font-family: 'Cormorant';
+    src: url("../../assets/fonts/Cormorant-Regular.ttf")
 }

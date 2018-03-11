@@ -1,6 +1,7 @@
 const path = require("path"),
     webpack = require("webpack"),
-    HtmlWebpackPlugin = require("html-webpack-plugin");
+    HtmlWebpackPlugin = require("html-webpack-plugin"),
+    imagesloaded = require("imagesloaded");
 
 module.exports = {
     entry: {
@@ -51,6 +52,6 @@ module.exports = {
         ]
     },
     plugins: [
-        new HtmlWebpackPlugin({ template: "./index.html" })
+        new HtmlWebpackPlugin({ template: "./index.html" }),
     ]
 }

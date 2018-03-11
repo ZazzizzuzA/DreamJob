@@ -9,12 +9,15 @@ html {
 }
 
 .content--fixed {
+    height: 100%;
     background-color: var(--color-content-fixed);
     display: flex;
     flex-flow: column nowrap;
     box-sizing: border-box;
     .block {
-        display: none;
+        opacity: 0;
+        position: absolute;
+        display: flex;
         flex: 1 1 auto;
         width: 100%;
         box-sizing: border-box;
@@ -23,7 +26,7 @@ html {
     .about-me {
         background-repeat: no-repeat;
         background-size: cover;
-        background-image: url(../../assets/images/bg4.jpg);
+        background-image: url(../../assets/images/bg1.jpg);
         height: 100vh;
         width: 100%;
         justify-content: center;
@@ -34,12 +37,18 @@ html {
             width: 50%;
             @include padding(20px, 10px);
             background: $bg_light_white;
+            font-size: 1.6em;
+            color: #110b5b;
+            p {
+                text-align: justify;
+                font-weight: 600;
+            }
         }
     }
     .about-job {
         background-repeat: no-repeat;
         background-size: cover;
-        background-image: url(../../assets/images/about-job.jpg);
+        background-image: url(../../assets/images/bg4.jpg);
         width: 100%;
         justify-content: flex-end;
         align-items: center;
@@ -62,7 +71,6 @@ html {
     .wishes {
         background-repeat: no-repeat;
         background-size: cover;
-        background-image: url(../../assets/images/about-job.jpg);
         width: 100%;
         justify-content: flex-end;
         align-items: center;
@@ -74,34 +82,12 @@ html {
             background: $bg_light_green;
         }
     }
-    .demands {
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-image: url(../../assets/images/about-job.jpg);
-        width: 100%;
-        justify-content: flex-end;
-        align-items: center;
-        @include padding(50px, 20px);
-        .demands_item {
-            height: 500px;
-            width: 70%;
-            @include padding(20px, 10px);
-            background: $bg_light_green;
-        }
-    }
     .contacts {
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-image: url(../../assets/images/about-job.jpg);
+        background-color: #004D40;
+        height: 400px;
         width: 100%;
         justify-content: flex-end;
         align-items: center;
         @include padding(50px, 20px);
-        .contacts_item {
-            height: 500px;
-            width: 70%;
-            @include padding(20px, 10px);
-            background: $bg_light_green;
-        }
     }
 }
