@@ -1,0 +1,46 @@
+@media (max-width: 800px){
+
+    .adaptive {
+    	.content__inner{
+    		padding-top: 0px;
+    	}
+    	.block__menu{
+    		width: 20%;
+    		ul{
+		    	li{
+		    		font-size: 1em;
+		    	}
+		    }
+		}   	
+	    .content--fixed{
+		    .skills{
+			    .grid {
+				    .skills_item_frame{
+				    	width: 25%;
+				    	height: 20%;
+				    	img {
+				                height: 50px;
+				                width: 60px;
+				            }
+				        .skill_text{
+				        	font-size: 0.7em;
+				        }
+				    }
+				}
+			}
+		}
+	}
+	    
+}
+@media (max-width: 480px) {
+	.adaptive {
+    	.block__menu{
+    		width: 20%;
+    		ul{
+		    	li{
+		    		font-size: 1em;
+	    		}
+	    	}
+		}  
+	}
+}

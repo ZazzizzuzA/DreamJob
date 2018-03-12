@@ -22,7 +22,7 @@ export default {
       return {
           titles: [
           {
-               name: "Обо мне"
+               name: "Главная"
           },
           {
               name: "О работе-мечте"
@@ -172,15 +172,16 @@ export default {
     top: 120px;
     width: 15%;
     background-color: $bg_light_white;
-    color: #1B5E20;
+    color: #004D40;
     @include padding(60px, 5px);
     z-index: 99999;
     ul{
         text-align: center;
         li{
-            font-size: 1.5em;
+            font-size: 2em;
             @include padding(10px, 0px);
-            cursor: pointer;        
+            cursor: pointer;     
+            font-weight: 600;   
         }
     }
 }
@@ -203,6 +204,7 @@ export default {
     @include padding(0px, 5px);
     left: 80px;
     top: 0px;
+    z-index: 2;
     p{
         display: inline-block;
         margin: 0px;
@@ -212,6 +214,7 @@ export default {
         }
     }
 }
+
 </style>
 
 

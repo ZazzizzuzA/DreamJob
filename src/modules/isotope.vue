@@ -1,4 +1,4 @@
-<template lang="pug">
+<!-- <template lang="pug">
     div.skills_item
         div#filters
             button(data-filter="*" ) Показать все
@@ -139,7 +139,7 @@ export default {
                 background-color: blueviolet;
                 @include padding(25px, 10px);
                 img{
-                height: 80px;
+                height: 100px;
                 }
             }
             .skill_text{
@@ -158,3 +158,4 @@ export default {
 </style>
 
 
+ -->

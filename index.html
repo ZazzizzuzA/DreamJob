@@ -8,7 +8,7 @@
     <title>Dream-Job</title>
 </head>
 
-<body class="demo loading">
+<body class="demo loading adaptive">
     <main>
         <div class="content content--intro">
             <div class="content__inner">
@@ -27,13 +27,91 @@
     <div class="content content--fixed super-small">
         <div id="menu"></div>
         <div class="block about-me">
-            <div class="about-me_item" id="aboutMe">
+ <!--            <div class="about-me_item" id="aboutMe">
                 <h2>Немного обо мне</h2>
                 <p class="about-me_text">Меня зовут Михаил. Считаю, что работа должна зависеть от человека, а не наоборот. Поэтому я начал изучать WEB-программирование в 2017 году. Подробнее с моими навыками и пожеланиями к работе вы сможете ознакомиться ниже.</p>
-            </div>
+            </div> -->
         </div>
         <div class="block skills">
-            <div id="skills"></div>
+            <div id="filters">
+                <button data-filter="*" >Показать все</button>
+                <button data-filter=".html" >Верстка</button>
+                <button data-filter=".js" >Программирование</button>
+            </div>
+            <div class="grid skills_item">
+                <div class="skills_item_frame grid-item html">
+                    <div class="skill_image_box">
+                        <img src="./assets/images/htmlCSS.png" class="skill_image">
+                    </div>
+                    <div class="skill_text">HTML & CSS</div>
+                </div>
+                <div class="skills_item_frame grid-item html">                    
+                    <div class="skill_image_box">
+                        <img src="./assets/images/scss.png" class="skill_image">
+                    </div>
+                    <div class="skill_text">Scss/Sass</div>
+                </div>
+                <div class="skills_item_frame grid-item js">
+                    <div class="skill_image_box">
+                        <img src="./assets/images/js.png" class="skill_image">
+                    </div>
+                    <div class="skill_text">JavaScript</div>
+                </div>
+                <div class="skills_item_frame grid-item js">
+                    <div class="skill_image_box">
+                        <img src="./assets/images/jquery.png" class="skill_image">
+                    </div>
+                    <div class="skill_text">jQuery</div>
+                </div>
+                <div class="skills_item_frame grid-item js">
+                    <div class="skill_image_box">
+                        <img src="./assets/images/vue.png" class="skill_image">
+                    </div>
+                    <div class="skill_text">Vue.js</div>
+                </div>
+                <div class="skills_item_frame grid-item html">
+                    <div class="skill_image_box">
+                        <img src="./assets/images/bem.png" class="skill_image">
+                    </div>
+                    <div class="skill_text">BEM</div>
+                </div>
+                <div class="skills_item_frame grid-item js">
+                    <div class="skill_image_box">
+                        <img src="./assets/images/node.png" class="skill_image">
+                    </div>
+                    <div class="skill_text">Node.js</div>
+                </div>
+                <div class="skills_item_frame grid-item js">
+                    <div class="skill_image_box">
+                        <img src="./assets/images/git.png" class="skill_image">
+                    </div>
+                    <div class="skill_text">GitHub</div>
+                </div>
+                <div class="skills_item_frame grid-item js">
+                    <div class="skill_image_box">
+                        <img src="./assets/images/Webpack.png" class="skill_image">
+                    </div>
+                    <div class="skill_text">Webpack</div>
+                </div>
+                <div class="skills_item_frame grid-item js">
+                    <div class="skill_image_box">
+                        <img src="./assets/images/npm.png" class="skill_image">
+                    </div>
+                    <div class="skill_text">NPM</div>
+                </div>
+                <div class="skills_item_frame grid-item html">
+                    <div class="skill_image_box">
+                        <img src="./assets/images/Pug.jpg" class="skill_image">
+                    </div>
+                    <div class="skill_text">Pug</div>
+                </div>
+                <div class="skills_item_frame grid-item js">
+                    <div class="skill_image_box">
+                        <img src="./assets/images/ajax.png" class="skill_image">
+                    </div>
+                    <div class="skill_text">Ajax</div>
+                </div>
+            </div>
         </div>
         <div class="block about-job">
             <div class="about-job_item" id="aboutJob">
@@ -51,6 +129,8 @@
         </div>
     </div>
     <script src="./dist/main.js"></script>
+    <script src="./src/modules/isotope.js"></script>
+
 </body>
 
 </html>
