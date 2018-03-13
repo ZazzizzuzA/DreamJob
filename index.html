@@ -25,8 +25,33 @@
         <!-- /content -->
     </main>
     <div class="content content--fixed super-small">
-        <div id="menu"></div>
+        <div id="menu">
+            <div id="nav-icon" class="close">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="item__exchangeRates">
+                <p class="rates"></p>
+                <p class="rates"></p>
+                <p class="rates"></p>
+                <div class="block__menu close_menu">
+                    <ul>
+                        <li>О себе</li>
+                        <li>О работе-мечте</li>
+                        <li>Пожелания</li>
+                        <li>Мои навыки</li>
+                        <li>Диаграммы</li>
+                        <li>Контакты</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
         <div class="block about-me">
+            <div class="glass_block"></div>
             <!--            <div class="about-me_item" id="aboutMe">
                 <h2>Немного обо мне</h2>
                 <p class="about-me_text">Меня зовут Михаил. Считаю, что работа должна зависеть от человека, а не наоборот. Поэтому я начал изучать WEB-программирование в 2017 году. Подробнее с моими навыками и пожеланиями к работе вы сможете ознакомиться ниже.</p>
@@ -34,9 +59,9 @@
         </div>
         <div class="block skills">
             <div id="filters">
-                <button data-filter="*">Показать все</button>
-                <button data-filter=".html">Верстка</button>
-                <button data-filter=".js">Программирование</button>
+                <button class="button_filter" data-filter="*">Показать все</button>
+                <button class="button_filter" data-filter=".html">Верстка</button>
+                <button class="button_filter" data-filter=".js">Программирование</button>
             </div>
             <div class="grid skills_item">
                 <div class="skills_item_frame grid-item html">
@@ -123,6 +148,9 @@
                 <h2>Пожелания</h2>
                 <div class="wishes_item_slider">Здесь будет owl carousel</div>
             </div>
+        </div>
+        <div class="block diagrames">
+            <h3>Диаграммы</h3>
         </div>
         <div class="block contacts">
             <h3>Контакты</h3>

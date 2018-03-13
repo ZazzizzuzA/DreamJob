@@ -34,7 +34,7 @@ const imagesLoaded = require('imagesloaded'); {
         loaded = true;
 
         document.getElementsByClassName('content--fixed')[0].style = "height: 100%";
-        // setTimeout(() => { document.getElementById('nav-icon').style = "z-index: 99999; opacity: 1" }, 1000);
+        setTimeout(() => { document.getElementById('nav-icon').style = "z-index: 99999; opacity: 1" }, 1000);
         Array.from(document.getElementsByClassName('block')).forEach((item) => { item.style = "position: relative; opacity: 1;" });
         anime({
             targets: DOM.intro,

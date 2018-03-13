@@ -1,7 +1,6 @@
 @import '_var';
 @import '_reset';
 @import 'intro';
-
 html {
     -ms-overflow-style: none;
      ::-webkit-scrollbar {
@@ -23,7 +22,7 @@ html {
         width: 100%;
         box-sizing: border-box;
         background: $bg_light_white;
-        box-shadow: 0px -8px 25px #424242;
+        box-shadow: 0px -8px 25px $shadow;
     }
     .about-me {
         background-repeat: no-repeat;
@@ -46,6 +45,14 @@ html {
                 font-weight: 600;
             }
         }
+        .glass_block {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            bottom: 0px;
+            right: 0px;
+            background: rgba($color: #000000, $alpha: 0.4);
+        }
     }
     .about-job {
         background-repeat: no-repeat;
@@ -65,7 +72,7 @@ html {
     .skills {
         display: flex;
         background-color: #FFE082;
-        height: 700px;
+        height: 750px;
         width: 100%;
         @include padding(40px, 10px);
         justify-content: flex-start;
@@ -77,26 +84,48 @@ html {
             display: flex;
             justify-content: flex-start;
             align-items: flex-start;
-            flex-flow: row wrap;            
-        .skills_item_frame{
-            width: 23%;
+            flex-flow: row wrap;
+            .skills_item_frame {
+                width: 23%;
+                text-align: center;
+                @include margin(5px, 10px);
+                .skill_image_box {
+                    border-radius: 5px 5px 0px 0px;
+                    background-color: blueviolet;
+                    @include padding(25px, 10px);
+                    img {
+                        height: 100px;
+                    }
+                }
+                .skill_text {
+                    border-radius: 0px 0px 5px 5px;
+                    background-color: $first_white;
+                    @include padding(5px, 0px);
+                    font-size: 1.2em;
+                    text-shadow: 3px 3px 5px $shadow;
+                }
+            }
+        }
+        #filters {
+            width: 100%;
             text-align: center;
-            @include margin(5px, 10px);
-            .skill_image_box{
-                border-radius: 5px 5px 0px 0px;
-                background-color: blueviolet;
-                @include padding(25px, 10px);
-                img {
-                height: 100px;
-
+            .button_filter {
+                border: 0px;
+                @include padding(10px, 15px);
+                font-family: 'Cormorant', serif;
+                font-size: 1.5em;
+                background-color: #3F51B5;
+                margin: 0px 15px 20px 15px;
+                border-radius: 5px;
+                box-shadow: 1px 3px 15px $shadow;
+                color: $first_white;
             }
-        }
-            .skill_text{
-                border-radius: 0px 0px 5px 5px;
-                background-color: $first_white;
-                @include padding(5px, 0px);
+            .button_filter:last-child {
+                margin-right: 0px;
             }
-        }
+            .button_filter:first-child {
+                margin-left: 0px;
+            }
         }
     }
     .wishes {
@@ -113,6 +142,14 @@ html {
             background: $bg_light_green;
         }
     }
+    // сделать bootstrap
+    .diagrames {
+        height: 100vh;
+        width: 100%;
+        justify-content: flex-end;
+        align-items: center;
+        @include padding(50px, 20px);
+    }
     .contacts {
         background-color: #004D40;
         height: 400px;
@@ -121,11 +158,144 @@ html {
         align-items: center;
         @include padding(50px, 20px);
     }
-    
-        
-    #filters{
-        width: 100%;
+    .close {
+        width: 30px;
+        height: 30px;
+        position: fixed;
+        left: 25px;
+        top: 10px;
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+        -webkit-transition: .5s ease-in-out;
+        -moz-transition: .5s ease-in-out;
+        -o-transition: .5s ease-in-out;
+        transition: .5s ease-in-out;
+        cursor: pointer;
+        transition: all 1s linear;
+        opacity: 0;
+        span {
+            display: block;
+            position: absolute;
+            height: 5px;
+            width: 50%;
+            background: #C6FF00;
+            opacity: 1;
+            -webkit-transform: rotate(0deg);
+            -moz-transform: rotate(0deg);
+            -o-transform: rotate(0deg);
+            transform: rotate(0deg);
+            -webkit-transition: .25s ease-in-out;
+            -moz-transition: .25s ease-in-out;
+            -o-transition: .25s ease-in-out;
+            transition: .25s ease-in-out;
+        }
+        span:nth-child(even) {
+            left: 50%;
+            border-radius: 0 9px 9px 0;
+        }
+        span:nth-child(odd) {
+            left: 0px;
+            border-radius: 9px 0 0 9px;
+        }
+        span:nth-child(1),
+        span:nth-child(2) {
+            top: 0px;
+        }
+        span:nth-child(3),
+        span:nth-child(4) {
+            top: 10px;
+        }
+        span:nth-child(5),
+        span:nth-child(6) {
+            top: 20px;
+        }
+    }
+    .open {
+        span:nth-child(1),
+        span:nth-child(6) {
+            -webkit-transform: rotate(45deg);
+            -moz-transform: rotate(45deg);
+            -o-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+        span:nth-child(2),
+        span:nth-child(5) {
+            -webkit-transform: rotate(-45deg);
+            -moz-transform: rotate(-45deg);
+            -o-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+        }
+        span:nth-child(1) {
+            left: 2px;
+            top: 7px;
+        }
+        span:nth-child(2) {
+            left: calc(50% - 5px);
+            top: 7px;
+        }
+        span:nth-child(3) {
+            left: -50%;
+            opacity: 0;
+        }
+        span:nth-child(4) {
+            left: 100%;
+            opacity: 0;
+        }
+        span:nth-child(5) {
+            left: 2px;
+            top: 29px;
+        }
+        span:nth-child(6) {
+            left: calc(50% - 5px);
+            top: 29px;
+        }
+    }
+    .block__menu {
+        position: fixed;
+        left: 0px;
+        top: 120px;
+        width: 15%;
+        background-color: $bg_light_white;
+        color: #004D40;
+        @include padding(60px, 5px);
+        z-index: 99999;
+        transition: all .4s ease-out;
+        ul {
+            text-align: center;
+            li {
+                font-size: 2em;
+                @include padding(10px, 0px);
+                cursor: pointer;
+                font-weight: 600;
+            }
+        }
+    }
+    .open_menu,
+    .close_menu {
+        transform: translateY(calc(-100% - 120px));
+    }
+    .item__exchangeRates {
+        position: absolute;
+        box-sizing: border-box;
+        width: 30%;
+        border: 1px groove #004D40;
+        background-color: #039BE5;
         text-align: center;
+        @include padding(0px, 5px);
+        left: 80px;
+        top: 0px;
+        z-index: 2;
+        p {
+            display: inline-block;
+            margin: 0px;
+            @include padding(5px, 10px);
+            span {
+                font-weight: 700;
+            }
+        }
     }
 }
+
 @import '_adaptive';
