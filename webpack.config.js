@@ -15,7 +15,7 @@ module.exports = {
         extensions: [".js", ".json", ".scss", ".css"],
         alias: {
             src: path.join(__dirname, "src"),
-        }
+        },
     },
     watch: true,
     module: {

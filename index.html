@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Dream-Job</title>
+    <link rel="stylesheet" href="./node_modules/owl.carousel/dist/assets/owl.carousel.css">
+    <link rel="stylesheet" href="./node_modules/owl.carousel/dist/assets/owl.theme.default.css">
+    <link rel="stylesheet" href="./src/styles/_animate.css">
 </head>
 
 <body class="demo loading adaptive">
@@ -144,10 +147,16 @@
             </div>
         </div>
         <div class="block wishes">
-            <div class="wishes_item" id="wishes">
-                <h2>Пожелания</h2>
-                <div class="wishes_item_slider">Здесь будет owl carousel</div>
+            <div class="owl-carousel">
+                <div class="slide"><img src="./assets/images/computer-programmer-computer.jpg"> Your Content 1 </div>
+                <div class="slide"><img src="./assets/images/computer-programmer-computer.jpg"> Your Content 2 </div>
+                <div class="slide"><img src="./assets/images/hi-tech-technology-notebook.jpg"> Your Content 3 </div>
+                <div class="slide"><img src="./assets/images/lampy-svet-energosberegayuschaya.jpg"> Your Content 4 </div>
+                <div class="slide"><img src="./assets/images/notebook-tablet-mouse-desk.jpg"> Your Content 5 </div>
+                <div class="slide"><img src="./assets/images/smartfon-noutbuk-ruki-vid-sverkhu-bloknoty-planshet-kofe-cha.jpg"> Your Content 6</div>
+                <div class="slide"><img src="./assets/images/computer-programmer-computer.jpg"> Your Content 7</div>
             </div>
+
         </div>
         <div class="block diagrames">
             <h3>Диаграммы</h3>
@@ -157,7 +166,19 @@
         </div>
     </div>
     <script src="./dist/main.js"></script>
-
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="./node_modules/owl.carousel/src/js/owl.carousel.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(".owl-carousel").owlCarousel({
+                items: 1,
+                dots: true,
+                loop: true,
+                nav: true,
+                pagination: true,
+            });
+        });
+    </script>
 </body>
 
 </html>

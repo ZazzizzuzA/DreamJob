@@ -1,6 +1,8 @@
 @import '_var';
 @import '_reset';
 @import 'intro';
+// @import '../../node_modules/owl.carousel/src/scss/owl.carousel';
+// @import '../../node_modules/owl.carousel/src/scss/owl.theme.default';
 html {
     -ms-overflow-style: none;
      ::-webkit-scrollbar {
@@ -131,15 +133,27 @@ html {
     .wishes {
         background-repeat: no-repeat;
         background-size: cover;
+        flex-flow: row wrap;
         width: 100%;
-        justify-content: flex-end;
+        height: 100vh;
         align-items: center;
         @include padding(50px, 20px);
-        .wishes_item {
-            height: 500px;
-            width: 70%;
-            @include padding(20px, 10px);
-            background: $bg_light_green;
+        background: $bg_light_green;
+        .slide {
+            position: relative;
+            color: $first_white;
+            height: 85vh;
+            font-size: 5em;
+            img {
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                right: 0px;
+                bottom: 0px;
+                z-index: -1;
+                opacity: 0.6;
+                height: 85vh;
+            }
         }
     }
     // сделать bootstrap
