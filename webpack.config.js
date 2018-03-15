@@ -33,7 +33,7 @@ module.exports = {
                 ]
             },
             {
-                test: /\.(woff|woff2|eot|ttf|otf)$/,
+                test: /\.(woff|woff2|eot|ttf|otf|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
                 loader: "file-loader"
             },
             {
@@ -42,7 +42,11 @@ module.exports = {
                     limit: 8000
                 },
                 loader: "url-loader"
-            }
+            },
+            {
+                test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+                loader: "url-loader?limit=10000&mimetype=application/font-woff"
+            },
         ]
     },
     plugins: [
@@ -55,7 +59,7 @@ module.exports = {
         new SWPrecacheWebpackPlugin({
             cacheId: "me-watch-" + Math.random(),
             filename: "service-worker.js",
-            staticFileGlobs: [ "dist/*.{js,html,css}"],
+            staticFileGlobs: ["dist/*.{js,html,css}"],
             stripPrefix: "dist/"
         })
     ]

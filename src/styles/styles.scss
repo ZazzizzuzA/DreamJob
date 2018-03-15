@@ -4,7 +4,6 @@
 @import '../../node_modules/owl.carousel/dist/assets/owl.carousel.css';
 @import '../../node_modules/owl.carousel/dist/assets/owl.theme.default.css';
 @import '_animate.css';
-
 html {
     -ms-overflow-style: none;
      ::-webkit-scrollbar {
@@ -139,22 +138,48 @@ html {
         width: 100%;
         height: 100vh;
         align-items: center;
+        justify-content: flex-end;
         @include padding(50px, 20px);
         background: $bg_light_green;
-        .slide {
-            position: relative;
-            color: $first_white;
-            height: 85vh;
-            font-size: 5em;
-            img {
-                position: absolute;
-                top: 0px;
-                left: 0px;
-                right: 0px;
-                bottom: 0px;
-                z-index: -1;
-                opacity: 0.6;
+        .slider {
+            width: 80%;
+            .slide {
+                position: relative;
+                color: $first_white;
                 height: 85vh;
+                font-size: 5em;
+                img {
+                    position: absolute;
+                    top: 0px;
+                    left: 0px;
+                    right: 0px;
+                    bottom: 0px;
+                    z-index: -1;
+                    opacity: 0.8;
+                    height: 85vh;
+                }
+            }
+            .owl-nav {
+                display: flex;
+                font-size: 1.5em;
+                justify-content: space-around;
+                @include padding(15px, 0px);
+                .owl-button-prev,
+                .owl-button-next {
+                    @include padding(10px, 15px);
+                    font-family: 'Cormorant', serif;
+                    font-size: 1em;
+                    box-sizing: border-box;
+                    border: 0px;
+                    outline: none;
+                    background-color: rgba(179, 157, 219, 0.5);
+                    cursor: pointer;
+                    transition: all 0.2s;
+                }
+                .owl-button-next:hover,
+                .owl-button-prev:hover {
+                    background-color: rgba(179, 157, 219, 1);
+                }
             }
         }
     }
