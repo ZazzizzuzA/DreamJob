@@ -1,7 +1,11 @@
 import "./styles/styles";
 import "./modules/demo4";
+import 'owl.carousel';
 
-
-// import "../node_modules/owl.carousel/src/js/owl.carousel.js";
 import abilities from "./modules/isotope.js";
-// import $ from "jquery";
+
+(function() {
+	if("serviceWorker" in navigator) {
+		navigator.serviceWorker.register( "service-worker.js" )
+	}
+})();

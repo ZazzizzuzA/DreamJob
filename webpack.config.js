@@ -1,7 +1,8 @@
 const path = require("path"),
     webpack = require("webpack"),
     HtmlWebpackPlugin = require("html-webpack-plugin"),
-    imagesloaded = require("imagesloaded");
+    imagesloaded = require("imagesloaded"),
+    SWPrecacheWebpackPlugin = require("sw-precache-webpack-plugin");
 
 module.exports = {
     entry: {
@@ -46,5 +47,16 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({ template: "./index.html" }),
+        new webpack.ProvidePlugin({
+            $: 'jquery',
+            jQuery: 'jquery',
+            'window.jQuery': 'jquery'
+        }),
+        new SWPrecacheWebpackPlugin({
+            cacheId: "me-watch-" + Math.random(),
+            filename: "service-worker.js",
+            staticFileGlobs: [ "dist/*.{js,html,css}"],
+            stripPrefix: "dist/"
+        })
     ]
 }

@@ -1,8 +1,10 @@
 @import '_var';
 @import '_reset';
 @import 'intro';
-// @import '../../node_modules/owl.carousel/src/scss/owl.carousel';
-// @import '../../node_modules/owl.carousel/src/scss/owl.theme.default';
+@import '../../node_modules/owl.carousel/dist/assets/owl.carousel.css';
+@import '../../node_modules/owl.carousel/dist/assets/owl.theme.default.css';
+@import '_animate.css';
+
 html {
     -ms-overflow-style: none;
      ::-webkit-scrollbar {

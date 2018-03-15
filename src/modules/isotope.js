@@ -25,21 +25,27 @@ icon.addEventListener('click', function openMenu() {
 
 });
 let exchangeRates = document.getElementsByClassName('exchangeRates')[0];
-let paragrRate = document.getElementsByClassName('rates');
+let paragrRate = Array.from(document.getElementsByClassName('rates'));
 
-function rates(url = "https://bank.gov.ua/NBUStatService/v1/statdirectory/exchange?json") {
-    return fetch(url).then(response => response.json())
+fetch("https://bank.gov.ua/NBUStatService/v1/statdirectory/exchange?json")
+    .then(response => response.json())
         .then(json => {
             let arrJson = [];
             for (var i = 0; i < json.length; i++) {
                 if (json[i].cc == "RUB" || json[i].cc == "USD" || json[i].cc == "EUR") {
-                    arrJson.push(json[i]);
+                    arrJson.push(json[i].exchangedate + " - " + json[i].cc + ": " + json[i].rate);
 
                 }
             }
-            return arrJson;
+            paragrRate.forEach( function(item, i) { item.innerHTML = arrJson[i]; })
         });
-}
 
 
-console.log(rates());
+       $(document).ready(function() {
+            $(".owl-carousel").owlCarousel({
+                items: 1,
+                dots: true,
+                loop: true,
+                nav: true,
+            });
+        });
