@@ -1,8 +1,9 @@
 $first_black: #212121;
 $first_white: #E3F2FD;
-$bg_light_white: #e6eac980;
+$bg_light_white: #e6eac9bb;
 $bg_light_green: rgba(129, 199, 132, 0.74);
 $shadow: #424242;
+$border_slide: linear-gradient(to top, left, rgb(51, 223, 102), rgb(1, 160, 126), rgb(86, 138, 252));
 .demo {
     --color-text: #4b2cf2;
     --color-link: #ec2525;

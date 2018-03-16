@@ -24,7 +24,7 @@
         </div>
         <!-- /content -->
     </main>
-    <div class="content content--fixed super-small">
+    <div class="content content--fixed">
         <div id="menu">
             <div id="nav-icon" class="close">
                 <span></span>
@@ -34,21 +34,22 @@
                 <span></span>
                 <span></span>
             </div>
-            <div class="item__exchangeRates">
-                <p class="rates"></p>
-                <p class="rates"></p>
-                <p class="rates"></p>
-                <div class="block__menu close_menu">
-                    <ul>
-                        <li>О себе</li>
-                        <li>О работе-мечте</li>
-                        <li>Пожелания</li>
-                        <li>Мои навыки</li>
-                        <li>Диаграммы</li>
-                        <li>Контакты</li>
-                    </ul>
-                </div>
+            <div class="block__menu close_menu">
+                <ul>
+                    <a href="#">О себе</a></br>
+
+                    <a href="#aboutJob">О работе-мечте</a><br>
+
+                    <a href="#wishesForAllTimes">Пожелания</a><br>
+
+                    <a href="#filters">Мои навыки</a><br>
+
+                    <a href="#diagramsRates">Диаграммы</a><br>
+
+                    <a href="#contactWithMe">Контакты</a>
+                </ul>
             </div>
+
         </div>
         <div class="block about-me">
             <div class="glass_block"></div>
@@ -143,22 +144,41 @@
                 <h2>О работе моей мечты</h2>
             </div>
         </div>
-        <div class="block wishes">
+        <div class="block wishes" id="wishesForAllTimes">
             <div class="owl-carousel slider">
-                <div class="slide"><img src="./assets/images/computer-programmer-computer.jpg"> Your Content 1 </div>
-                <div class="slide"><img src="./assets/images/computer-programmer-computer.jpg"> Your Content 2 </div>
-                <div class="slide"><img src="./assets/images/hi-tech-technology-notebook.jpg"> Your Content 3 </div>
-                <div class="slide"><img src="./assets/images/lampy-svet-energosberegayuschaya.jpg"> Your Content 4 </div>
-                <div class="slide"><img src="./assets/images/notebook-tablet-mouse-desk.jpg"> Your Content 5 </div>
-                <div class="slide"><img src="./assets/images/smartfon-noutbuk-ruki-vid-sverkhu-bloknoty-planshet-kofe-cha.jpg"> Your Content 6</div>
-                <div class="slide"><img src="./assets/images/computer-programmer-computer.jpg"> Your Content 7</div>
+                <div class="slide"><img src="./assets/images/computer-programmer-computer.jpg"><span>Your Content 1</span> </div>
+                <div class="slide"><img src="./assets/images/computer-programmer-computer.jpg"> <span>Your Content 2</span> </div>
+                <div class="slide"><img src="./assets/images/hi-tech-technology-notebook.jpg"> <span>Your Content 3 </span> </div>
+                <div class="slide"><img src="./assets/images/lampy-svet-energosberegayuschaya.jpg"><span> Your Content 4 </span></div>
+                <div class="slide"><img src="./assets/images/notebook-tablet-mouse-desk.jpg"> <span>Your Content 5</span> </div>
+                <div class="slide"><img src="./assets/images/smartfon-noutbuk-ruki-vid-sverkhu-bloknoty-planshet-kofe-cha.jpg"><span> А на этом фото руки похоже на мои. Думаю, это из-за рубашки - похожая имеется.</span></div>
+                <div class="slide"><img src="./assets/images/computer-programmer-computer.jpg"><span> Your Content 7</span></div>
             </div>
 
         </div>
         <div class="block diagrames">
-            <h3>Диаграммы</h3>
+            <h3>
+                <a href="#" id="diagramsRates"></a>Курс валют и диаграммы</h3>
+            <div class="item__table_exchageValue">
+                <input type="text" id="myOwnValue">
+                <input type="text" id="valueOfRates" disabled></br>
+                <button onclick="clickButton()">Count Value</button>
+
+                <input type="radio" id="usdRates" name="ratesExchange" value="USD" autofocus="myOwnValue">
+                <label for="usdRates">USD</label>
+
+                <input type="radio" id="eurRates" name="ratesExchange" value="EUR">
+                <label for="eurRates">EUR</label>
+
+                <input type="radio" id="rurRates" name="ratesExchange" value="RUR">
+                <label for="rurRates">RUR</label>
+
+                <input type="radio" id="btcRates" name="ratesExchange" value="BTC">
+                <label for="btcRates">BTC</label>
+            </div>
+            <div class="item__exchangeRates"></div>
         </div>
-        <div class="block contacts">
+        <div class="block contacts" id="contactWithMe">
             <h3>Контакты</h3>
         </div>
     </div>

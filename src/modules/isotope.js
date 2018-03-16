@@ -24,22 +24,48 @@ icon.addEventListener('click', function openMenu() {
     menu.classList.toggle('close_menu');
 
 });
-let exchangeRates = document.getElementsByClassName('exchangeRates')[0];
-let paragrRate = Array.from(document.getElementsByClassName('rates'));
+let payment = document.getElementById('myOwnValue');
+let cost = document.getElementById('valueOfRates');
+let usd = document.getElementById('usdRates');
+let eur = document.getElementById('eurRates');
+let rur = document.getElementById('rurRates');
+let btc = document.getElementById('btcRates');
+let divUSD = document.getElementById('USD');
 
-fetch("https://bank.gov.ua/NBUStatService/v1/statdirectory/exchange?json")
-    .then(response => response.json())
-    .then(json => {
-        let arrJson = [];
-        for (var i = 0; i < json.length; i++) {
-            if (json[i].cc == "RUB" || json[i].cc == "USD" || json[i].cc == "EUR") {
-                arrJson.push(json[i].exchangedate + " - " + json[i].cc + ": " + json[i].rate);
+payment.addEventListener('keyup', countValue);
 
-            }
+function countValue() {
+    if (event.keyCode == 13) {
+        if (usd.checked) {
+            cost.value = payment.value * USD.innerText;
+
+        } else if (rur.checked) {
+            cost.value = payment.value * RUR.innerText;
+
+        } else if (eur.checked) {
+            cost.value = payment.value * EUR.innerText;
+
+        } else if (btc.checked) {
+            cost.value = payment.value * BTC.innerText;
         }
-        paragrRate.forEach(function(item, i) { item.innerHTML = arrJson[i]; })
-    });
 
+    }
+}
+
+function clickButton() {
+    if (usd.checked) {
+        cost.value = payment.value * USD.innerText;
+
+    } else if (rur.checked) {
+        cost.value = payment.value * RUR.innerText;
+
+    } else if (eur.checked) {
+        cost.value = payment.value * EUR.innerText;
+
+    } else if (btc.checked) {
+        cost.value = payment.value * BTC.innerText;
+    }
+}
 
 $(document).ready(function() {
     $(".owl-carousel").owlCarousel({
@@ -49,6 +75,46 @@ $(document).ready(function() {
         nav: true,
         navText: ["Previous", "Next"],
         navClass: ["owl-button-prev", "owl-button-next"],
+        animateOut: 'fadeOut',
+        animateIn: 'fadeIn',
+        autoplay: true,
+        autoplayTimeout: 5000,
+        autoplayHoverPause: true,
+        responsiveClass: true,
+        responsive: {
+            0: {
+                items: 1,
+                nav: true,
+                navText: ["Previous", "Next"],
+                navClass: ["owl-button-prev", "owl-button-next"],
+                animateOut: 'fadeOut',
+                animateIn: 'fadeIn',
+            },
+            600: {
+                items: 1,
+                nav: true,
+                navText: ["Previous", "Next"],
+                navClass: ["owl-button-prev", "owl-button-next"],
+                animateOut: 'fadeOut',
+                animateIn: 'fadeIn',
+            },
+            1080: {
+                items: 1,
+                nav: true,
+                navText: ["Previous", "Next"],
+                navClass: ["owl-button-prev", "owl-button-next"],
+                animateOut: 'fadeOut',
+                animateIn: 'fadeIn',
+            },
+            1240: {
+                items: 1,
+                nav: true,
+                navText: ["Previous", "Next"],
+                navClass: ["owl-button-prev", "owl-button-next"],
+                animateOut: 'fadeOut',
+                animateIn: 'fadeIn',
+            }
+        }
 
     });
 });

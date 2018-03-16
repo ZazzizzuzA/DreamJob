@@ -142,12 +142,25 @@ html {
         @include padding(50px, 20px);
         background: $bg_light_green;
         .slider {
-            width: 80%;
+            width: 60%;
+            box-shadow: -20px 15px 40px $shadow;
+            background-color: rgba(0, 149, 194, 0.733);
+            border-radius: 15px;
             .slide {
                 position: relative;
+                display: flex;
+                flex-flow: column wrap;
+                justify-content: flex-end;
                 color: $first_white;
-                height: 85vh;
-                font-size: 5em;
+                height: 450px;
+                font-size: 3em;
+                color: rgb(0, 81, 255);
+                font-weight: 500;
+                span {
+                    display: block;
+                    align-self: center;
+                    text-align: center;
+                }
                 img {
                     position: absolute;
                     top: 0px;
@@ -156,7 +169,8 @@ html {
                     bottom: 0px;
                     z-index: -1;
                     opacity: 0.8;
-                    height: 85vh;
+                    height: 450px;
+                    border-radius: 15px 15px 0px 0px;
                 }
             }
             .owl-nav {
@@ -175,6 +189,7 @@ html {
                     background-color: rgba(179, 157, 219, 0.5);
                     cursor: pointer;
                     transition: all 0.2s;
+                    box-shadow: -10px 5px 20px $shadow;
                 }
                 .owl-button-next:hover,
                 .owl-button-prev:hover {
@@ -187,9 +202,40 @@ html {
     .diagrames {
         height: 100vh;
         width: 100%;
-        justify-content: flex-end;
-        align-items: center;
+        justify-content: flex-start;
+        flex-flow: row wrap;
+        align-items: flex-start;
         @include padding(50px, 20px);
+        h3 {
+            width: 100vw;
+            margin: 0px;
+            text-align: center;
+        }
+        .item__table_exchageValue {
+            width: 100%;
+        }
+        .item__exchangeRates {
+            position: relative;
+            box-sizing: border-box;
+            width: 13%;
+            border: 1px groove #004D40;
+            background-color: #039BE5;
+            text-align: left;
+            @include padding(0px, 5px);
+            h3 {
+                width: 100%;
+                margin: 0px;
+                text-align: left;
+            }
+            p {
+                display: inline-block;
+                margin: 0px;
+                @include padding(5px, 10px);
+                span {
+                    font-weight: 700;
+                }
+            }
+        }
     }
     .contacts {
         background-color: #004D40;
@@ -301,11 +347,13 @@ html {
         background-color: $bg_light_white;
         color: #004D40;
         @include padding(60px, 5px);
-        z-index: 99999;
+        z-index: -1;
         transition: all .4s ease-out;
         ul {
             text-align: center;
-            li {
+            a {
+                text-decoration: none;
+                line-height: 55px;
                 font-size: 2em;
                 @include padding(10px, 0px);
                 cursor: pointer;
@@ -316,26 +364,6 @@ html {
     .open_menu,
     .close_menu {
         transform: translateY(calc(-100% - 120px));
-    }
-    .item__exchangeRates {
-        position: absolute;
-        box-sizing: border-box;
-        width: 30%;
-        border: 1px groove #004D40;
-        background-color: #039BE5;
-        text-align: center;
-        @include padding(0px, 5px);
-        left: 80px;
-        top: 0px;
-        z-index: 2;
-        p {
-            display: inline-block;
-            margin: 0px;
-            @include padding(5px, 10px);
-            span {
-                font-weight: 700;
-            }
-        }
     }
 }
 
