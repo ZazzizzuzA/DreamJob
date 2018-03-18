@@ -31,7 +31,9 @@ let eur = document.getElementById('eurRates');
 let rur = document.getElementById('rurRates');
 let btc = document.getElementById('btcRates');
 let divUSD = document.getElementById('USD');
+let counter = document.getElementById('countValue');
 
+counter.onclick = clickButton;
 payment.addEventListener('keyup', countValue);
 
 function countValue() {
@@ -66,6 +68,7 @@ function clickButton() {
         cost.value = payment.value * BTC.innerText;
     }
 }
+
 
 $(document).ready(function() {
     $(".owl-carousel").owlCarousel({

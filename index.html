@@ -25,6 +25,29 @@
         <!-- /content -->
     </main>
     <div class="content content--fixed">
+        <div class="item__table_exchageValue">
+            <div class="item__exchangeRates"></div>
+            <div class="item__input_values">
+                <input type="text" id="myOwnValue">
+                <input type="text" id="valueOfRates" disabled>
+                <div class="item__radio_rates">
+                    <input type="radio" id="usdRates" name="ratesExchange" value="USD" checked>
+                    <label for="usdRates">USD</label>
+
+                    <input type="radio" id="eurRates" name="ratesExchange" value="EUR">
+                    <label for="eurRates">EUR</label>
+
+                    <input type="radio" id="rurRates" name="ratesExchange" value="RUR">
+                    <label for="rurRates">RUR</label>
+
+                    <input type="radio" id="btcRates" name="ratesExchange" value="BTC">
+                    <label for="btcRates">BTC</label>
+                </div>
+                <button id="countValue">Расчитать</button>
+            </div>
+
+
+        </div>
         <div id="menu">
             <div id="nav-icon" class="close">
                 <span></span>
@@ -34,6 +57,8 @@
                 <span></span>
                 <span></span>
             </div>
+
+
             <div class="block__menu close_menu">
                 <ul>
                     <a href="#">О себе</a></br>
@@ -159,25 +184,19 @@
         </div>
         <div class="block diagrames">
             <h3>
-                <a href="#" id="diagramsRates"></a>Курс валют и диаграммы</h3>
-            <div class="item__table_exchageValue">
-                <input type="text" id="myOwnValue">
-                <input type="text" id="valueOfRates" disabled></br>
-                <button onclick="clickButton()">Count Value</button>
+                <a href="#" id="diagramsRates"></a>Диаграммы
+            </h3>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col">Диаграмма 1</div>
+                    <div class="col">Диаграмма 2</div>
+                    <div class="w-100"></div>
+                    <div class="col">Диаграмма 3</div>
+                    <div class="col">Диаграмма 4</div>
 
-                <input type="radio" id="usdRates" name="ratesExchange" value="USD" autofocus="myOwnValue">
-                <label for="usdRates">USD</label>
-
-                <input type="radio" id="eurRates" name="ratesExchange" value="EUR">
-                <label for="eurRates">EUR</label>
-
-                <input type="radio" id="rurRates" name="ratesExchange" value="RUR">
-                <label for="rurRates">RUR</label>
-
-                <input type="radio" id="btcRates" name="ratesExchange" value="BTC">
-                <label for="btcRates">BTC</label>
+                </div>
             </div>
-            <div class="item__exchangeRates"></div>
+
         </div>
         <div class="block contacts" id="contactWithMe">
             <h3>Контакты</h3>

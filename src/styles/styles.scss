@@ -4,6 +4,8 @@
 @import '../../node_modules/owl.carousel/dist/assets/owl.carousel.css';
 @import '../../node_modules/owl.carousel/dist/assets/owl.theme.default.css';
 @import '_animate.css';
+@import "_custom";
+@import "~bootstrap/scss/bootstrap";
 html {
     -ms-overflow-style: none;
      ::-webkit-scrollbar {
@@ -17,6 +19,64 @@ html {
     display: flex;
     flex-flow: column nowrap;
     box-sizing: border-box;
+    .item__table_exchageValue {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100vw;
+        display: flex;
+        flex-flow: row nowrap;
+        z-index: 10;
+        box-sizing: border-box;
+        height: 120px;
+        background-color: $bg_light_blue;
+        color: $first_white;
+        justify-content: flex-end;
+        .item__exchangeRates {
+            position: relative;
+            display: flex;
+            flex-flow: row wrap;
+            box-sizing: border-box;
+            text-align: left;
+            @include padding(0px, 5px);
+            border-left: 2px groove #00a2be;
+            border-right: 2px groove #00a2be;
+            h3 {
+                margin: 0px;
+                text-align: left;
+                font-weight: 600;
+            }
+            p {
+                margin: 0px;
+                @include padding(5px, 10px);
+                font-size: 1.2em;
+                span {
+                    font-weight: 700;
+                }
+            }
+        }
+        .item__input_values {
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: space-between;
+            @include padding(0px, 15px);
+            .item__radio_rates {
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: space-between;
+                align-items: center;
+                label {
+                    margin: 0px;
+                }
+            }
+            #myOwnValue,
+            #valueOfRates {
+                font-size: 1.3em;
+                outline: none;
+                line-height: 20px;
+            }
+        }
+    }
     .block {
         opacity: 0;
         position: absolute;
@@ -70,7 +130,7 @@ html {
             height: 500px;
             width: 70%;
             @include padding(20px, 10px);
-            background: $bg_light_green;
+            background: $bg_light_blue;
             z-index: 2;
         }
     }
@@ -146,7 +206,7 @@ html {
         .slider {
             width: 60%;
             box-shadow: -20px 15px 40px $shadow;
-            background-color: rgba(0, 149, 194, 0.733);
+            background-color: $bg_light_blue;
             border-radius: 15px;
             .slide {
                 position: relative;
@@ -215,31 +275,6 @@ html {
             width: 100vw;
             margin: 0px;
             text-align: center;
-        }
-        .item__table_exchageValue {
-            width: 100%;
-        }
-        .item__exchangeRates {
-            position: relative;
-            box-sizing: border-box;
-            width: 13%;
-            border: 1px groove #004D40;
-            background-color: #039BE5;
-            text-align: left;
-            @include padding(0px, 5px);
-            h3 {
-                width: 100%;
-                margin: 0px;
-                text-align: left;
-            }
-            p {
-                display: inline-block;
-                margin: 0px;
-                @include padding(5px, 10px);
-                span {
-                    font-weight: 700;
-                }
-            }
         }
     }
     .contacts {
@@ -349,8 +384,7 @@ html {
         left: 0px;
         top: 120px;
         width: 15%;
-        background-color: $bg_light_white;
-        color: #004D40;
+        background-color: $bg_light_blue;
         @include padding(60px, 5px);
         z-index: -1;
         transition: all .4s ease-out;
@@ -363,6 +397,7 @@ html {
                 @include padding(10px, 0px);
                 cursor: pointer;
                 font-weight: 600;
+                color: $first_white;
             }
         }
     }
