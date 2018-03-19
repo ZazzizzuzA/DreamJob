@@ -4,6 +4,7 @@ import "./modules/demo4";
 import 'owl.carousel';
 import "./controller/ctrl";
 import Isotope from "isotope-layout";
+import Chart from 'chart.js';
 
 (function() {
     if ("serviceWorker" in navigator) {
@@ -80,6 +81,41 @@ function clickButton() {
         cost.value = USD.innerText * BTC.innerText;
     }
 }
+$(document).ready(function() {
+    $(".slider-big").owlCarousel({
+        items: 1,
+        dots: true,
+        loop: true,
+        animateOut: 'fadeOut',
+        animateIn: 'fadeIn',
+        autoplay: true,
+        autoplayTimeout: 5000,
+        responsiveClass: true,
+        responsive: {
+            0: {
+                items: 1,
+                animateOut: 'fadeOut',
+                animateIn: 'fadeIn',
+            },
+            600: {
+                items: 1,
+                animateOut: 'fadeOut',
+                animateIn: 'fadeIn',
+            },
+            1080: {
+                items: 1,
+                animateOut: 'fadeOut',
+                animateIn: 'fadeIn',
+            },
+            1240: {
+                items: 1,
+                animateOut: 'fadeOut',
+                animateIn: 'fadeIn',
+            }
+        }
+
+    });
+});
 
 
 $(document).ready(function() {
@@ -133,3 +169,18 @@ $(document).ready(function() {
 
     });
 });
+Chart.defaults.scale.ticks.beginAtZero = true;
+
+let diagrSkills = document.getElementById('diagram_skills');
+let mySkillsChart = new Chart(diagrSkills, {
+    type: "radar",
+    data: {
+        labels: ["HTML", "CSS", "SCSS/SASS", "PUG", "Webpack", "Vue.js", "Bootstrap", "JavaScript", "jQuery", "GitHub"],
+        datasets: [{
+            label: ["Уровень навыка"],
+            data: [80, 80, 70, 80, 50, 60, 40, 60, 50, 80],
+            backgroundColor: "rgba(221, 255, 0, 0.3)",
+            borderColor: "#001dff60",
+        }]
+    }
+})

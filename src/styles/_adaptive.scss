@@ -1,64 +1,59 @@
-@media (max-width: 800px){
-
+@media (max-width: 800px) {
     .adaptive {
-    	.content__inner{
-    		padding-top: 0px;
-    		.block{
-    			.about-me{
-    				.about-me_item{
-    					.about-me_text{
-
-    					}
-    				}
-    			}
-    		}
-    	}
-    	.block__menu{
-    		width: 20%;
-    		ul{
-		    	a{
-		    		font-size: 1em;
-		    	}
-		    }
-		}   	
-	    .content--fixed{
-		    .skills{
-			    .grid {
-				    .skills_item_frame{
-				    	width: 25%;
-				    	height: 20%;
-				    	img {
-				                height: 50px;
-				                width: 60px;
-				            }
-				        .skill_text{
-				        	font-size: 0.7em;
-				        }
-				    }
-				}
-			}
-		}
-	}
-	    
+        .content__inner {
+            padding-top: 0px;
+            .block {
+                .about-me {
+                    .about-me_item {
+                        .about-me_text {}
+                    }
+                }
+            }
+        }
+        .block__menu {
+            width: 20%;
+            ul {
+                a {
+                    font-size: 1em;
+                }
+            }
+        }
+        .content--fixed {
+            .skills {
+                .grid {
+                    .skills_item_frame {
+                        width: 25%;
+                        height: 20%;
+                        img {
+                            height: 50px;
+                            width: 60px;
+                        }
+                        .skill_text {
+                            font-size: 0.7em;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
+
 @media (max-width: 480px) {
-	.adaptive {
-		.content__inner{
-			font-size: 0.4em;
-		}
-    	.block__menu{
-    		width: 20%;
-    		ul{
-		    	a{
-		    		font-size: 1em;
-	    		}
-	    	}
-		}  
-	}
+    .adaptive {
+        .content__inner {
+            font-size: 0.4em;
+        }
+        .block__menu {
+            width: 20%;
+            ul {
+                a {
+                    font-size: 1em;
+                }
+            }
+        }
+    }
 }
-@media (max-width: 640px) {
 
-}
-@media (max-width: 960px) {
+@media (max-width: 640px) {}
 
-}
+@media (max-width: 960px) {}
