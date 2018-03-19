@@ -61,6 +61,11 @@ module.exports = {
             filename: "service-worker.js",
             staticFileGlobs: ["dist/*.{js,html,css}"],
             stripPrefix: "dist/"
-        })
+        }),
+        // new imagesloaded ({ 
+        //     paths:{
+        //         app: "./dist/"
+        //         }  
+        //     }),
     ]
 }
