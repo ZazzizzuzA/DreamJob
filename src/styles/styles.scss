@@ -6,6 +6,8 @@
 @import '_animate.css';
 @import "_custom";
 @import "~bootstrap/scss/bootstrap";
+@import "_demo.css";
+@import "_playful.css";
 html {
     -ms-overflow-style: none;
      ::-webkit-scrollbar {
@@ -79,7 +81,6 @@ html {
         }
     }
     .block {
-        opacity: 0;
         position: absolute;
         display: flex;
         flex: 1 1 auto;
@@ -147,7 +148,7 @@ html {
     .skills {
         display: flex;
         background-color: #FFE082;
-        height: 750px;
+        height: 100vh;
         width: 100%;
         @include padding(40px, 10px);
         justify-content: flex-start;
@@ -155,13 +156,11 @@ html {
         flex-flow: row wrap;
         .grid {
             width: 100%;
-            height: 100%;
+            max-height: 100vh;
             display: flex;
-            justify-content: flex-start;
-            align-items: flex-start;
             flex-flow: row wrap;
             .skills_item_frame {
-                width: 23%;
+                width: 20vw;
                 text-align: center;
                 @include margin(5px, 10px);
                 .skill_image_box {
@@ -169,7 +168,7 @@ html {
                     background-color: blueviolet;
                     @include padding(25px, 10px);
                     img {
-                        height: 100px;
+                        height: 70px;
                     }
                 }
                 .skill_text {
@@ -243,7 +242,7 @@ html {
                     right: 0px;
                     bottom: 0px;
                     z-index: -1;
-                    opacity: 0.8;
+                    opacity: 0.7;
                     height: 450px;
                     border-radius: 15px 15px 0px 0px;
                 }
@@ -275,20 +274,21 @@ html {
     }
     // сделать bootstrap
     .diagrames {
-        height: 100vh;
         background-position: 50% 50%;
-        background-size: 100%;
         background-repeat: no-repeat;
         background-image: url(../../assets/images/noutbuk_samsung_trava_109439_3000x2000.jpg);
         width: 100%;
+        height: auto;
+        display: none;
         justify-content: flex-start;
         flex-flow: row wrap;
         align-items: flex-start;
         @include padding(50px, 20px);
         h3 {
             width: 100vw;
-            margin: 0px;
+            margin-bottom: 15px;
             text-align: center;
+            z-index: 10;
         }
     }
     .contacts {
@@ -430,18 +430,18 @@ html {
             display: flex;
             flex-flow: column wrap;
             justify-content: space-around;
-            color: $first_white;
             height: 100vh;
             font-size: 4em;
             color: $first_white;
             font-weight: 500;
             @include padding(0px, 10px);
             span {
-                font-family: 'Good Vibes', serif;
+                font-family: 'Dorothea Deco', serif;
                 display: block;
                 align-self: center;
                 text-align: center;
                 text-shadow: -10px 15px 10px $shadow;
+                color: rgba(0, 255, 128, 0.822);
             }
             img {
                 position: absolute;

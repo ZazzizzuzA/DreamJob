@@ -1,6 +1,8 @@
 import 'bootstrap';
 import "./styles/styles";
 import "./modules/demo4";
+import "./modules/demo";
+import "./modules/demo5";
 import 'owl.carousel';
 import "./controller/ctrl";
 import Isotope from "isotope-layout";
@@ -170,8 +172,11 @@ $(document).ready(function() {
     });
 });
 Chart.defaults.scale.ticks.beginAtZero = true;
-
+// document.getElementsByClassName('col').forEach((item) => {
+//     Chart.canvas.item.style.height = '128px';
+// })
 let diagrSkills = document.getElementById('diagram_skills');
+
 let mySkillsChart = new Chart(diagrSkills, {
     type: "radar",
     data: {
@@ -179,8 +184,62 @@ let mySkillsChart = new Chart(diagrSkills, {
         datasets: [{
             label: ["Уровень навыка"],
             data: [80, 80, 70, 80, 50, 60, 40, 60, 50, 80],
-            backgroundColor: "rgba(221, 255, 0, 0.3)",
+            backgroundColor: "rgba(224, 131, 60, 0.5)",
             borderColor: "#001dff60",
+            pointRadius: 5,
+            pointBackgroundColor: "rgba(0, 14, 175, 0.5)",
+
+        }],
+
+    },
+    options: {
+        legend: {
+            labels: {
+                fontColor: 'rgb(0, 0, 0)',
+
+            },
+            position: 'bottom',
+        },
+        title: {
+            display: true,
+            text: 'Приблизительный уровень навыков',
+            fontColor: "rgb(0, 0, 0)",
+            fontSize: 20,
+            fontFamily: 'Cormorant',
+        },
+    }
+});
+let chartBar = document.getElementById('chartBar');
+window.onload = new Chart(chartBar, {
+    type: "line",
+    data: {
+        labels: ["Ноябрь 2016", "Декабрь 2016", "Январь 2017", "Февраль 2017", "Март 2017", "Апрель 2017", "Май 2017", "Июнь 2017", "Июль 2017", "Август 2017", "Сентябрь 2017", "Октябрь 2017", "Ноябрь 2017", "Декабрь 2017", "Январь 2018", "Февраль 2018", "Март 2018"],
+        datasets: [{
+            label: "Уровень навык",
+            backgroundColor: "rgba(212, 79, 242, 0.6)",
+            data: [0, 10, 10, 10, 13, 20, 25, 27, 27, 30, 35, 45, 45, 50, 53, 65, 70],
+            pointRadius: 3,
+            pointBackgroundColor: "rgba(91, 167, 229, 0.5)",
+            tension: 0.2,
+            borderColor: "rgba(32, 0, 214, 0.6)",
+            borderWidth: 5,
+
         }]
+    },
+    options: {
+        legend: {
+            display: true,
+            labels: {
+                fontColor: 'rgb(0, 0, 0)'
+            },
+            position: 'bottom',
+        },
+        title: {
+            display: true,
+            text: 'Прогресс роста с начала изучения',
+            fontColor: "rgb(0, 0, 0)",
+            fontSize: 20,
+            fontFamily: 'Cormorant',
+        },
     }
 })

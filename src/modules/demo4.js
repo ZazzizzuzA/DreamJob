@@ -35,7 +35,10 @@ const imagesLoaded = require('imagesloaded'); {
 
         setTimeout(() => { document.getElementById('nav-icon').style = "z-index: 99999; opacity: 1" }, 1000);
         document.getElementsByClassName('block__menu')[0].style = "z-index: 99999";
-        Array.from(document.getElementsByClassName('block')).forEach((item) => { item.style = "position: relative; opacity: 1;" });
+        Array.from(document.getElementsByClassName('block')).forEach((item) => { item.style = "position: relative" });
+        document.getElementsByClassName("diagrames")[0].style = "display: flex; position: relative";
+
+
         anime({
             targets: DOM.intro,
             translateY: {

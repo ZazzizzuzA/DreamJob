@@ -1,10 +1,15 @@
 .container-fluid {
-    // background: rgb(21, 211, 30);
     .row {
-        .col {
+        justify-content: space-around;
+        .bootstrap_for_canvas {
             text-align: center;
-            border: 1px solid rgb(0, 156, 70);
             background-color: $bg_light_white;
+            position: relative;
+            @include padding(10px, 0px);
+            background-color: rgba(108, 134, 218, 0.7);
+        }
+        .bootstrap_for_canvas:first-child {
+            border-bottom: 2px solid rgb(0, 68, 131);
         }
     }
 }
