@@ -19,6 +19,7 @@
     },
     "homepage": "https://github.com/ZazzizzuzA/FrontPage#readme",
     "dependencies": {
+        "@fortawesome/fontawesome-free-webfonts": "^1.0.4",
         "animejs": "^2.2.0",
         "bootstrap": "^4.0.0",
         "charming": "^2.2.2",
@@ -27,7 +28,6 @@
         "eslint": "^4.18.2",
         "eslint-loader": "^2.0.0",
         "file-loader": "^1.1.11",
-        "font-awesome": "^4.7.0",
         "html-webpack-plugin": "^3.0.6",
         "http-server": "^0.11.1",
         "imagesloaded": "^4.1.4",

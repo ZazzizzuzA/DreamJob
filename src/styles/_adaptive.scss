@@ -1,11 +1,35 @@
 @media (max-width: 800px) {
     .adaptive {
-        .content__inner {
+        .content--fixed {
             padding-top: 0px;
             .block {
                 .about-me {
                     .about-me_item {
-                        .about-me_text {}
+                        .about-me_text {
+                            font-size: 0.5em;
+                        }
+                    }
+                }
+            }
+            .item__table_exchageValue {
+                @include padding(10px, 0px);
+                .item__exchangeRates {
+                    padding: 0px;
+                    div {
+                        p {
+                            padding: 0px;
+                            font-size: 1em;
+                        }
+                        h3 {
+                            font-size: 1em;
+                        }
+                    }
+                }
+                .item__input_values {
+                    .item__radio_rates {
+                        label {
+                            font-size: 0.8em;
+                        }
                     }
                 }
             }

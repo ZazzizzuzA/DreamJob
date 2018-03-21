@@ -1,8 +1,7 @@
 import 'bootstrap';
 import "./styles/styles";
 import "./modules/demo4";
-import "./modules/demo";
-import "./modules/demo5";
+// import "../assets/web-fonts-with-css/scss/fontawesome";
 import 'owl.carousel';
 import "./controller/ctrl";
 import Isotope from "isotope-layout";
@@ -13,7 +12,6 @@ import Chart from 'chart.js';
         navigator.serviceWorker.register("service-worker.js")
     }
 })();
-
 
 var elem = document.querySelector('.grid');
 var iso = new Isotope(elem, {
@@ -242,4 +240,4 @@ window.onload = new Chart(chartBar, {
             fontFamily: 'Cormorant',
         },
     }
-})
+});

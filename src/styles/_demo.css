@@ -9,7 +9,7 @@
 
 .content--layout {
     grid-template-columns: 100%;
-    padding: 3em 0;
+    padding: 3em 0 1em 3em;
 }
 
 .word {
