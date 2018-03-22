@@ -2,7 +2,8 @@ const path = require("path"),
     webpack = require("webpack"),
     HtmlWebpackPlugin = require("html-webpack-plugin"),
     imagesloaded = require("imagesloaded"),
-    SWPrecacheWebpackPlugin = require("sw-precache-webpack-plugin");
+    SWPrecacheWebpackPlugin = require("sw-precache-webpack-plugin"),
+    CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     entry: {
@@ -62,10 +63,6 @@ module.exports = {
             staticFileGlobs: ["dist/*.{js,html,css}"],
             stripPrefix: "dist/"
         }),
-        // new imagesloaded ({ 
-        //     paths:{
-        //         app: "./dist/"
-        //         }  
-        //     }),
+        new CopyWebpackPlugin([{ from: 'assets/**/*' }])
     ]
 }

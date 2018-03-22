@@ -1,7 +1,6 @@
 import 'bootstrap';
 import "./styles/styles";
 import "./modules/demo4";
-// import "../assets/web-fonts-with-css/scss/fontawesome";
 import 'owl.carousel';
 import "./controller/ctrl";
 import Isotope from "isotope-layout";
