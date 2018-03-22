@@ -63,6 +63,7 @@ module.exports = {
             staticFileGlobs: ["dist/*.{js,html,css}"],
             stripPrefix: "dist/"
         }),
-        new CopyWebpackPlugin([{ from: 'assets/**/*' }])
+        new CopyWebpackPlugin([{ from: 'assets/**/*' }]),
+        // new imagesloaded([ { from: 'assets/**/*' } ])
     ]
 }

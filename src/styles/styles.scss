@@ -351,7 +351,7 @@ html {
             position: absolute;
             height: 5px;
             width: 50%;
-            background: rgb(17, 0, 255);
+            background: rgb(17, 140, 240);
             opacity: 1;
             -webkit-transform: rotate(0deg);
             -moz-transform: rotate(0deg);
@@ -440,10 +440,17 @@ html {
                 text-decoration: none;
                 line-height: 55px;
                 font-size: 2em;
-                @include padding(10px, 0px);
+                @include padding(10px, 15px);
                 cursor: pointer;
                 font-weight: 600;
                 color: $first_white;
+                transition: all .4s ease-out;
+                z-index: 99999;
+                box-sizing: border-box;
+            }
+            a:hover{
+                border: 1px groove $first_white;
+                box-shadow: 2px 4px 8px $shadow;
             }
         }
         img {
