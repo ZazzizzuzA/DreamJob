@@ -12,6 +12,8 @@ import Chart from 'chart.js';
     }
 })();
 
+/*        Изотоп        */
+
 var elem = document.querySelector('.grid');
 var iso = new Isotope(elem, {
     itemSelector: '.grid-item',
@@ -36,6 +38,9 @@ icon.addEventListener('click', function openMenu() {
     menu.classList.toggle('close_menu');
 
 });
+
+/*      Convector      */
+
 let payment = document.getElementById('myOwnValue');
 let cost = document.getElementById('valueOfRates');
 let usd = document.getElementById('usdRates');
@@ -80,6 +85,9 @@ function clickButton() {
         cost.value = USD.innerText * BTC.innerText;
     }
 }
+
+/*   Owl_carousels   */
+
 $(document).ready(function() {
     $(".slider-big").owlCarousel({
         items: 1,
@@ -168,10 +176,12 @@ $(document).ready(function() {
 
     });
 });
+
+/*  Diagrams   */
+
 Chart.defaults.scale.ticks.beginAtZero = true;
-// document.getElementsByClassName('col').forEach((item) => {
-//     Chart.canvas.item.style.height = '128px';
-// })
+Chart.defaults.global.defaultFontColor = "#3E2723";
+
 let diagrSkills = document.getElementById('diagram_skills');
 
 let mySkillsChart = new Chart(diagrSkills, {
@@ -207,7 +217,7 @@ let mySkillsChart = new Chart(diagrSkills, {
     }
 });
 let chartBar = document.getElementById('chartBar');
-window.onload = new Chart(chartBar, {
+new Chart(chartBar, {
     type: "line",
     data: {
         labels: ["Ноябрь 2016", "Декабрь 2016", "Январь 2017", "Февраль 2017", "Март 2017", "Апрель 2017", "Май 2017", "Июнь 2017", "Июль 2017", "Август 2017", "Сентябрь 2017", "Октябрь 2017", "Ноябрь 2017", "Декабрь 2017", "Январь 2018", "Февраль 2018", "Март 2018"],
@@ -240,3 +250,5 @@ window.onload = new Chart(chartBar, {
         },
     }
 });
+
+
