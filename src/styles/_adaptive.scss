@@ -1,59 +1,130 @@
-@media (max-width: 800px) {
+@media (max-width: 640px) {
     .adaptive {
-        .content--fixed {
-            padding-top: 0px;
-            .block {
-                .about-me {
-                    .about-me_item {
-                        .about-me_text {
-                            font-size: 0.5em;
+        main {
+            .content--intro {
+                .content__inner {
+                    padding-top: 0px;
+                    .content--layout {
+                        .content__subtitle {
+                            font-size: 1em;
+                        }
+                        a {
+                            font-size: 1em;
+                        }
+                        .word--playful {
+                            font-size: 60px;
                         }
                     }
                 }
             }
-            .item__table_exchageValue {
-                @include padding(10px, 0px);
-                .item__exchangeRates {
-                    padding: 0px;
-                    div {
-                        p {
-                            padding: 0px;
-                            font-size: 1em;
-                        }
-                        h3 {
-                            font-size: 1em;
-                        }
+        }
+        .item__table_exchageValue {
+            @include padding(10px, 0px);
+            .item__exchangeRates {
+                padding: 0px;
+                div {
+                    p {
+                        padding: 0px;
+                        font-size: 1em;
+                    }
+                    h3 {
+                        font-size: 1em;
                     }
                 }
-                .item__input_values {
-                    .item__radio_rates {
-                        label {
-                            font-size: 0.8em;
-                        }
+            }
+            .item__input_values {
+                .item__radio_rates {
+                    label {
+                        font-size: 0.8em;
                     }
                 }
             }
         }
         .block__menu {
-            width: 20%;
+            width: 35%;
             ul {
                 a {
-                    font-size: 1em;
+                    font-size: 1.2em;
                 }
+            }
+            img {
+                height: 100px;
             }
         }
         .content--fixed {
+            padding-top: 0px;
+            .slider-big {
+                .slide-big {
+                    span {
+                        font-size: 3em;
+                        width: 90%;
+                    }
+                }
+            }
+            .about-me {
+                justify-content: center;
+                .about-me_item {
+                    width: 90%;
+                    p {
+                        font-size: 1.2em;
+                    }
+                }
+            }
             .skills {
+                #filters {
+                    button {
+                        // margin: 0;
+                    }
+                }
                 .grid {
                     .skills_item_frame {
-                        width: 25%;
+                        width: 24%;
                         height: 20%;
                         img {
-                            height: 50px;
-                            width: 60px;
+                            height: 40px;
+                            width: 50px;
                         }
                         .skill_text {
                             font-size: 0.7em;
+                        }
+                    }
+                }
+            }
+            .about-job {
+                justify-content: center;
+                .about-job_item {
+                    width: 90%;
+                    p {
+                        font-size: 1.2em;
+                    }
+                }
+            }
+            .wishes {
+                justify-content: center;
+                .slider {
+                    width: 90%;
+                    .slide {
+                        font-size: 3em;
+                    }
+                }
+            }
+            .diagrams {
+                .bootstrap_for_canvas {
+                    max-width: 90%;
+                }
+            }
+            .contacts {
+                @include padding(30px, 5px);
+                .contacts_links {
+                    padding-top: 15px;
+                    .links {
+                        img {
+                            height: 30px;
+                        }
+                    }
+                    .email {
+                        p {
+                            font-size: 1em;
                         }
                     }
                 }
@@ -64,20 +135,122 @@
 
 @media (max-width: 480px) {
     .adaptive {
-        .content__inner {
-            font-size: 0.4em;
+        main {
+            .content--intro {
+                .content__inner {
+                    padding-top: 0px;
+                    .content--layout {
+                        .content__subtitle {
+                            font-size: 1em;
+                        }
+                        a {
+                            font-size: 1em;
+                        }
+                        .word--playful {
+                            font-size: 60px;
+                        }
+                    }
+                }
+            }
         }
         .block__menu {
-            width: 20%;
+            width: 100%;
+            background-color: rgba(25, 103, 221, 0.9);
             ul {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
                 a {
-                    font-size: 1em;
+                    font-size: 1.5em;
+                    width: 60%;
+                    margin: 0;
+                    padding: 0;
+                }
+            }
+            img {
+                display: none;
+            }
+        }
+        .content--fixed {
+            // .block {}
+            .slider-big {
+                .slide-big {
+                    span {
+                        font-size: 1.5em;
+                    }
+                }
+                .owl-dots {
+                    display: none;
+                }
+            }
+            .about-me {
+                .about-me_item {
+                    p {
+                        font-size: 0.9em;
+                    }
+                }
+            }
+            .skills {
+                #filters {
+                    display: flex;
+                    flex-flow: row wrap;
+                    margin: 0px 0px 20px 0px;
+                }
+                .grid {
+                    .skills_item_frame {
+                        .skill_image_box {
+                            padding: 10px 10px;
+                        }
+                        img {
+                            height: 25px;
+                            width: 25px;
+                        }
+                    }
+                }
+            }
+            .about-job {
+                justify-content: center;
+                .about-job_item {
+                    width: 90%;
+                    p {
+                        font-size: 0.9em;
+                        padding-top: 0px;
+                    }
+                    h2 {
+                        font-size: 1.5em;
+                    }
+                }
+            }
+            .wishes {
+                .slider {
+                    .slide {
+                        font-size: 2.5em;
+                    }
+                }
+            }
+            .diagrams {
+                .bootstrap_for_canvas {
+                    max-width: 100%;
+                }
+            }
+            .contacts {
+                @include padding(30px, 5px);
+                .contacts_links {
+                    padding-top: 15px;
+                    .links {
+                        img {
+                            height: 30px;
+                        }
+                    }
+                    .email {
+                        p {
+                            font-size: 1em;
+                        }
+                    }
                 }
             }
         }
     }
 }
 
-@media (max-width: 640px) {}
-
-@media (max-width: 960px) {}
+@media (max-width: 860px) {}

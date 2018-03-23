@@ -96,9 +96,9 @@ html {
         background-image: url(../../assets/images/bg1.jpg);
         height: 100vh;
         width: 100%;
-        justify-content: center;
+        justify-content: flex-end;
         align-items: center;
-        @include padding(20px, 10px);
+        @include padding(50px, 20px);
         .about-me_item {
             position: relative;
             z-index: 10;
@@ -107,6 +107,7 @@ html {
             background: rgba(25, 103, 221, 0.8);
             color: $first-white;
             box-shadow: 10px 15px 25px $shadow;
+            border-radius: 15px;
             p {
                 text-align: justify;
                 font-weight: 600;
@@ -129,19 +130,17 @@ html {
         background-position: 50% 75%;
         width: 100%;
         justify-content: flex-end;
-        align-items: center;
         @include padding(50px, 20px);
         .about-job_item {
-            height: 500px;
             width: 70%;
             @include padding(20px, 10px);
             background: $bg_light_blue;
             z-index: 2;
+            border-radius: 15px;
             p {
                 text-align: justify;
                 font-weight: 600;
                 font-size: 1.4em;
-                padding-top: 15px;
             }
         }
     }
@@ -155,14 +154,15 @@ html {
         align-items: flex-start;
         flex-flow: row wrap;
         .grid {
-            width: 90%;
-            max-height: 100vh;
+            box-sizing: border-box;
+            width: 87%;
+            height: 80% !important;
             display: flex;
             flex-flow: row wrap;
             .skills_item_frame {
-                width: 20vw;
+                width: 20%;
                 text-align: center;
-                @include margin(5px, 10px);
+                @include margin(2px, 10px);
                 .skill_image_box {
                     border-radius: 5px 5px 0px 0px;
                     background-color: blueviolet;
@@ -181,15 +181,18 @@ html {
             }
         }
         #filters {
+            display: flex;
+            justify-content: space-around;
+            flex-flow: row wrap;
+            align-items: center;
             width: 100%;
-            text-align: center;
             .button_filter {
                 border: 0px;
                 @include padding(10px, 15px);
                 font-family: 'Cormorant', serif;
                 font-size: 1.5em;
                 background-color: #3F51B5;
-                margin: 0px 15px 20px 15px;
+                margin: 0px 0px 20px 0px;
                 border-radius: 5px;
                 box-shadow: 1px 3px 15px $shadow;
                 color: $first_white;
@@ -273,16 +276,14 @@ html {
         }
     }
     // сделать bootstrap
-    .diagrames {
+    .diagrams {
         background-position: 50% 48%;
         background-repeat: no-repeat;
         background-image: url(../../assets/images/noutbuk_samsung_trava_109439_3000x2000.jpg);
         width: 100%;
-        height: auto;
         display: none;
-        justify-content: flex-start;
         flex-flow: row wrap;
-        align-items: flex-start;
+        align-items: center;
         @include padding(50px, 20px);
         h3 {
             width: 100vw;
@@ -449,10 +450,10 @@ html {
                 box-sizing: border-box;
                 @include margin(10px, 0px);
             }
-            a:hover{
+            a:hover {
                 border: 1px groove $first_white;
                 box-shadow: 2px 4px 8px $shadow;
-                background-color: rgba(250,250,250,0.1);
+                background-color: rgba(250, 250, 250, 0.1);
             }
         }
         img {
@@ -475,7 +476,6 @@ html {
             flex-flow: column wrap;
             justify-content: space-around;
             height: 100vh;
-            font-size: 4em;
             color: $first_white;
             font-weight: 500;
             @include padding(0px, 10px);
@@ -486,6 +486,7 @@ html {
                 text-align: center;
                 text-shadow: -10px 15px 10px $shadow;
                 color: $first_white;
+                font-size: 4em;
                 width: 60%;
             }
             img {
@@ -501,8 +502,8 @@ html {
         .owl-dots {
             position: absolute;
             bottom: 20px;
-            width: 150px;
-            right: 45%;
+            width: 100%;
+            text-align: center;
             .owl-dot {
                 background: none repeat scroll 0 0 $shadow;
                 border-radius: 20px;

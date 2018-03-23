@@ -32,12 +32,14 @@ const imagesLoaded = require('imagesloaded'); {
     const navigate = () => {
         if (loaded) return;
         loaded = true;
-
+        /* Моя вставка, остальное готовый шаблон с codedrops*/
         setTimeout(() => { document.getElementById('nav-icon').style = "z-index: 99999; opacity: 1" }, 1000);
         document.getElementsByClassName('block__menu')[0].style = "z-index: 99999";
         Array.from(document.getElementsByClassName('block')).forEach((item) => { item.style = "position: relative" });
-        document.getElementsByClassName("diagrames")[0].style = "display: flex; position: relative";
+        document.getElementsByClassName("diagrams")[0].style = "display: flex; position: relative";
+        // document.getElementsByClassName("skills_item")[0].style = "height: 100%";
 
+        /* Моя вставка*/
 
         anime({
             targets: DOM.intro,

@@ -7,6 +7,7 @@
             position: relative;
             @include padding(10px, 0px);
             background-color: rgba(108, 134, 218, 0.7);
+            max-width: 70%;
         }
         .bootstrap_for_canvas:first-child {
             border-bottom: 2px solid rgb(0, 68, 131);
