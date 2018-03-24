@@ -35,29 +35,7 @@
         <!-- /content -->
     </main>
     <div class="content content--fixed">
-        <div class="item__table_exchageValue">
-            <div class="item__exchangeRates"></div>
-            <div class="item__input_values">
-                <input type="text" id="myOwnValue">
-                <input type="text" id="valueOfRates" disabled>
-                <div class="item__radio_rates">
-                    <input type="radio" id="usdRates" name="ratesExchange" value="USD" checked>
-                    <label for="usdRates">USD</label>
 
-                    <input type="radio" id="eurRates" name="ratesExchange" value="EUR">
-                    <label for="eurRates">EUR</label>
-
-                    <input type="radio" id="rurRates" name="ratesExchange" value="RUR">
-                    <label for="rurRates">RUR</label>
-
-                    <input type="radio" id="btcRates" name="ratesExchange" value="BTC">
-                    <label for="btcRates">BTC</label>
-                </div>
-                <button id="countValue">Расчитать</button>
-            </div>
-
-
-        </div>
         <div id="menu">
             <div id="nav-icon" class="close">
                 <span></span>
@@ -224,18 +202,45 @@
 
         </div>
         <div class="block contacts" id="contactWithMe">
-            <h3>Контакты</h3>
-            <div class="contacts_links">
-                <div class="links">
-                    <a href="https://github.com/ZazzizzuzA" target="_blank"><img src="./assets/images/github-logo.png" alt="github-logo"></a>
-                    <a href="https://www.facebook.com/musicvyp" target="_blank"><img src="./assets/images/facebook_logos.png" alt="facebook_logos"></a>
-                    <a href="https://www.linkedin.com/in/%D0%BC%D0%B8%D1%85%D0%B0%D0%B8%D0%BB-%D0%BF%D0%B8%D0%BB%D0%B8%D0%BF%D0%B5%D0%BD%D0%BA%D0%BE-88971b160/" target="_blank"><img src="./assets/images/LinkedIn-Logo.png" alt="LinkedIn-Logo"></a>
-                </div>
-                <div class="email">
-                    <h5>E-mail:</h5>
-                    <p>musicvyp@gmail.com</p>
+            <h3>Личная информация</h3>
+            <div class="email">
+                <h5>E-mail:</h5>
+                <p>musicvyp@gmail.com</p>
+            </div>
+
+            <div class="links">
+                <a href="https://github.com/ZazzizzuzA" target="_blank"><img src="./assets/images/github-logo.png" alt="github-logo"></a>
+                <a href="https://www.facebook.com/musicvyp" target="_blank"><img src="./assets/images/facebook_logos.png" alt="facebook_logos"></a>
+                <a href="https://www.linkedin.com/in/%D0%BC%D0%B8%D1%85%D0%B0%D0%B8%D0%BB-%D0%BF%D0%B8%D0%BB%D0%B8%D0%BF%D0%B5%D0%BD%D0%BA%D0%BE-88971b160/" target="_blank"><img src="./assets/images/LinkedIn-Logo.png" alt="LinkedIn-Logo"></a>
+            </div>
+            <div class="item__table_exchageValue">
+
+                <div class="item__exchangeRates"></div>
+                <div class="item__input_values">
+                    <h4>Конвертер валют<br> по курсу ПриватБанка</h4>
+
+                    <div class="values-rates__flex">
+                        <p>From</p>
+                        <select name="from" id="ratesFrom" class="select-rates">
+                         
+                                <option id="usdRatesFrom" class="select_option">USD</option>
+                                <option id="rurRatesFrom" class="select_option">RUR</option>
+                                <option id="eurRatesFrom" class="select_option">EUR</option>
+                                <option id="btcRatesFrom" class="select_option">BTC</option>                          
+                        </select>
+                        <p>To</p>
+                        <input name="to" id="ratesTo" class="select-rates" value="UAH" disabled>
+                    </div>
+                    <input type="text" id="myOwnValue" value="600">
+                    <p type="text" id="valueOfRates">Результат: <br><span id="resultOfRates"></span></p>
+
+
+                    <button id="countValue">Расчитать</button>
                 </div>
             </div>
+
+
+
         </div>
     </div>
     <script src="./dist/main.js"></script>

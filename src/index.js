@@ -42,47 +42,49 @@ icon.addEventListener('click', function openMenu() {
 /*      Convector      */
 
 let payment = document.getElementById('myOwnValue');
-let cost = document.getElementById('valueOfRates');
-let usd = document.getElementById('usdRates');
-let eur = document.getElementById('eurRates');
-let rur = document.getElementById('rurRates');
-let btc = document.getElementById('btcRates');
+// let cost = document.getElementById('valueOfRates');
+let usd = document.getElementById('usdRatesFrom');
+let eur = document.getElementById('eurRatesFrom');
+let rur = document.getElementById('rurRatesFrom');
+let btc = document.getElementById('btcRatesFrom');
 let divUSD = document.getElementById('USD');
 let counter = document.getElementById('countValue');
+let fromRates = document.getElementById("ratesFrom"),
+    res = document.getElementById('resultOfRates');
 
 counter.onclick = clickButton;
 payment.addEventListener('keyup', countValue);
 
 function countValue() {
     if (event.keyCode == 13) {
-        if (usd.checked) {
-            cost.value = payment.value * USD.innerText;
+        if (fromRates.value == usd.value) {
+            res.innerText = payment.value * USD.innerText;
 
-        } else if (rur.checked) {
-            cost.value = payment.value * RUR.innerText;
+        } else if (fromRates.value == rur.value) {
+            res.innerText = payment.value * RUR.innerText;
 
-        } else if (eur.checked) {
-            cost.value = payment.value * EUR.innerText;
+        } else if (fromRates.value == eur.value) {
+            res.innerText = payment.value * EUR.innerText;
 
-        } else if (btc.checked) {
-            cost.value = USD.innerText * BTC.innerText;
+        } else if (fromRates.value == btc.value) {
+            res.innerText = USD.innerText * BTC.innerText;
         }
 
     }
 }
 
 function clickButton() {
-    if (usd.checked) {
-        cost.value = payment.value * USD.innerText;
+    if (fromRates.value == usd.value) {
+        res.innerText = payment.value * USD.innerText;
 
-    } else if (rur.checked) {
-        cost.value = payment.value * RUR.innerText;
+    } else if (fromRates.value == rur.value) {
+        res.innerText = payment.value * RUR.innerText;
 
-    } else if (eur.checked) {
-        cost.value = payment.value * EUR.innerText;
+    } else if (fromRates.value == eur.value) {
+        res.innerText = payment.value * EUR.innerText;
 
-    } else if (btc.checked) {
-        cost.value = USD.innerText * BTC.innerText;
+    } else if (fromRates.value == btc.value) {
+        res.innerText = USD.innerText * BTC.innerText;
     }
 }
 
@@ -250,5 +252,3 @@ new Chart(chartBar, {
         },
     }
 });
-
-

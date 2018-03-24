@@ -1,3 +1,137 @@
+@media (max-width: 860px) {
+    .adaptive {
+        main {
+            .content--intro {
+                .content__inner {
+                    padding-top: 0px;
+                    .content--layout {
+                        .content__subtitle {
+                            font-size: 1em;
+                        }
+                        a {
+                            font-size: 1em;
+                        }
+                        .word--playful {
+                            font-size: 60px;
+                        }
+                    }
+                }
+            }
+        }
+        .item__table_exchageValue {
+            @include padding(10px, 0px);
+            .item__exchangeRates {
+                padding: 0px;
+                div {
+                    p {
+                        padding: 0px;
+                        font-size: 1em;
+                    }
+                    h3 {
+                        font-size: 1em;
+                    }
+                }
+            }
+            .item__input_values {
+                .item__radio_rates {
+                    label {
+                        font-size: 0.8em;
+                    }
+                }
+            }
+        }
+        .block__menu {
+            width: 35%;
+            ul {
+                a {
+                    font-size: 1.2em;
+                }
+            }
+            img {
+                height: 100px;
+            }
+        }
+        .content--fixed {
+            padding-top: 0px;
+            .slider-big {
+                .slide-big {
+                    span {
+                        font-size: 3em;
+                        width: 90%;
+                    }
+                }
+            }
+            .about-me {
+                justify-content: center;
+                .about-me_item {
+                    width: 90%;
+                    p {
+                        font-size: 1.2em;
+                    }
+                }
+            }
+            .skills {
+                .grid {
+                    .skills_item_frame {
+                        width: 24%;
+                        height: 20%;
+                        img {
+                            height: 40px;
+                            width: 50px;
+                        }
+                        .skill_text {
+                            font-size: 0.7em;
+                        }
+                    }
+                }
+            }
+            .about-job {
+                justify-content: center;
+                .about-job_item {
+                    width: 90%;
+                    p {
+                        font-size: 1.2em;
+                    }
+                }
+            }
+            .wishes {
+                justify-content: center;
+                .slider {
+                    width: 90%;
+                    .slide {
+                        font-size: 3em;
+                    }
+                }
+            }
+            .diagrams {
+                .bootstrap_for_canvas {
+                    max-width: 90%;
+                }
+            }
+            .contacts {
+                @include padding(30px, 5px);
+                .item__table_exchageValue {
+                    width: 270px;
+                }
+                .links {
+                    justify-content: flex-start;
+                    a {
+                        margin-bottom: 30px;
+                        img {
+                            height: 30px;
+                        }
+                    }
+                }
+                .email {
+                    p {
+                        font-size: 1em;
+                    }
+                }
+            }
+        }
+    }
+}
+
 @media (max-width: 640px) {
     .adaptive {
         main {
@@ -71,11 +205,6 @@
                 }
             }
             .skills {
-                #filters {
-                    button {
-                        // margin: 0;
-                    }
-                }
                 .grid {
                     .skills_item_frame {
                         width: 24%;
@@ -115,17 +244,14 @@
             }
             .contacts {
                 @include padding(30px, 5px);
-                .contacts_links {
-                    padding-top: 15px;
-                    .links {
-                        img {
-                            height: 30px;
-                        }
+                .links {
+                    img {
+                        height: 30px;
                     }
-                    .email {
-                        p {
-                            font-size: 1em;
-                        }
+                }
+                .email {
+                    p {
+                        font-size: 1em;
                     }
                 }
             }
@@ -140,6 +266,7 @@
                 .content__inner {
                     padding-top: 0px;
                     .content--layout {
+                        padding: 2em 1em 1em 1em;
                         .content__subtitle {
                             font-size: 1em;
                         }
@@ -161,10 +288,11 @@
                 flex-direction: column;
                 align-items: center;
                 a {
-                    font-size: 1.5em;
+                    font-size: 1em;
                     width: 60%;
                     margin: 0;
                     padding: 0;
+                    line-height: 40px;
                 }
             }
             img {
@@ -187,6 +315,7 @@
                 .about-me_item {
                     p {
                         font-size: 0.9em;
+                        line-height: 1.2;
                     }
                 }
             }
@@ -211,9 +340,9 @@
             .about-job {
                 justify-content: center;
                 .about-job_item {
-                    width: 90%;
+                    width: 100%;
                     p {
-                        font-size: 0.9em;
+                        font-size: 0.8em;
                         padding-top: 0px;
                     }
                     h2 {
@@ -224,7 +353,7 @@
             .wishes {
                 .slider {
                     .slide {
-                        font-size: 2.5em;
+                        font-size: 2em;
                     }
                 }
             }
@@ -235,22 +364,50 @@
             }
             .contacts {
                 @include padding(30px, 5px);
-                .contacts_links {
-                    padding-top: 15px;
-                    .links {
-                        img {
-                            height: 30px;
+                .item__table_exchageValue {
+                    width: 120px;
+                    height: 265px;
+                    padding: 10px 0px;
+                    .item__input_values {
+                        padding: 0px;
+                        .values-rates__flex {
+                            p {
+                                font-size: 1em;
+                                line-height: 25px;
+                            }
+                            p:first-child {
+                                display: none;
+                            }
+                            .select-rates {
+                                width: 50px;
+                                height: 25px;
+                                font-size: 0.75em;
+                            }
                         }
-                    }
-                    .email {
-                        p {
+                        h4 {
                             font-size: 1em;
                         }
+                    }
+                }
+                #valueOfRates {
+                    font-size: 1em;
+                }
+                .links {
+                    a {
+                        img {
+                            height: 20px;
+                        }
+                    }
+                }
+                .email {
+                    h5 {
+                        font-size: 1em;
+                    }
+                    p {
+                        font-size: 0.7em;
                     }
                 }
             }
         }
     }
 }
-
-@media (max-width: 860px) {}

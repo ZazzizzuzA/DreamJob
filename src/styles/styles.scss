@@ -21,65 +21,6 @@ html {
     display: flex;
     flex-flow: column nowrap;
     box-sizing: border-box;
-    .item__table_exchageValue {
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        width: 100vw;
-        display: flex;
-        flex-flow: row nowrap;
-        z-index: 10;
-        box-sizing: border-box;
-        height: 120px;
-        background-color: $bg_light_blue;
-        color: $first_white;
-        justify-content: flex-end;
-        @include padding(10px, 10px);
-        .item__exchangeRates {
-            position: relative;
-            display: flex;
-            flex-flow: row wrap;
-            box-sizing: border-box;
-            text-align: left;
-            @include padding(0px, 5px);
-            border-left: 2px groove #00a2be;
-            border-right: 2px groove #00a2be;
-            h3 {
-                margin: 0px;
-                text-align: left;
-                font-weight: 600;
-            }
-            p {
-                margin: 0px;
-                @include padding(5px, 10px);
-                font-size: 1.2em;
-                span {
-                    font-weight: 700;
-                }
-            }
-        }
-        .item__input_values {
-            display: flex;
-            flex-flow: column nowrap;
-            justify-content: space-between;
-            @include padding(0px, 15px);
-            .item__radio_rates {
-                display: flex;
-                flex-flow: row nowrap;
-                justify-content: space-between;
-                align-items: center;
-                label {
-                    margin: 0px;
-                }
-            }
-            #myOwnValue,
-            #valueOfRates {
-                font-size: 1.3em;
-                outline: none;
-                line-height: 20px;
-            }
-        }
-    }
     .block {
         position: absolute;
         display: flex;
@@ -281,6 +222,7 @@ html {
         background-repeat: no-repeat;
         background-image: url(../../assets/images/noutbuk_samsung_trava_109439_3000x2000.jpg);
         width: 100%;
+        height: auto;
         display: none;
         flex-flow: row wrap;
         align-items: center;
@@ -294,35 +236,110 @@ html {
     }
     .contacts {
         background-color: rgb(0, 36, 77);
-        height: 400px;
+        height: 60vh;
         width: 100%;
-        flex-flow: column wrap;
+        flex-flow: row wrap;
         @include padding(50px, 50px);
         color: $first_white;
+        justify-content: space-between;
+        .item__table_exchageValue {
+            display: flex;
+            flex-flow: row nowrap;
+            box-sizing: border-box;
+            height: 300px;
+            width: 320px;
+            background-color: $bg_light_blue;
+            color: $first_white;
+            justify-content: flex-end;
+            @include padding(10px, 10px);
+            .item__exchangeRates {
+                position: relative;
+                display: none;
+                flex-flow: row wrap;
+                box-sizing: border-box;
+                text-align: left;
+                @include padding(0px, 5px);
+                border-left: 2px groove #00a2be;
+                border-right: 2px groove #00a2be;
+                h3 {
+                    margin: 0px;
+                    text-align: left;
+                    font-weight: 600;
+                }
+                p {
+                    margin: 0px;
+                    @include padding(5px, 10px);
+                    font-size: 1.2em;
+                    span {
+                        font-weight: 700;
+                    }
+                }
+            }
+            .item__input_values {
+                display: flex;
+                flex-flow: column wrap;
+                width: 100%;
+                box-sizing: border-box;
+                justify-content: space-around;
+                @include padding(0px, 15px);
+                h4 {
+                    margin: 0;
+                    width: 100%;
+                    text-align: center;
+                }
+                .values-rates__flex {
+                    display: flex;
+                    flex-flow: row nowrap;
+                    justify-content: space-between;
+                    .select-rates {
+                        width: 60px;
+                        height: 40px;
+                    }
+                    p {
+                        width: 60px;
+                        margin: 0;
+                        text-align: center;
+                        line-height: 40px;
+                        font-size: 1.5em;
+                    }
+                }
+                p {
+                    margin: 0;
+                }
+                #resultOfRates {
+                    display: block;
+                    height: 25px;
+                    background-color: #fcf537;
+                    width: 25%;
+                    border-radius: 5px;
+                    margin-top: 5px;
+                }
+                #myOwnValue,
+                #valueOfRates {
+                    font-size: 1.3em;
+                    outline: none;
+                    line-height: 20px;
+                    width: 100%;
+                }
+            }
+        }
         h3 {
             text-align: center;
             width: 100%;
             font-weight: 600;
         }
-        .contacts_links {
+        .links {
             display: flex;
-            flex-flow: row nowrap;
-            justify-content: space-around;
-            height: 200px;
-            width: 100%;
-            .links {
-                display: flex;
-                flex-flow: column wrap;
-                justify-content: space-between;
-                a {
-                    img {
-                        height: 50px;
-                        box-shadow: 0px 0px 8px 4px $bg_light_blue;
-                        transition: all 300ms linear;
-                    }
-                    img:hover {
-                        box-shadow: 0px 0px 15px 8px $bg_light_blue;
-                    }
+            flex-flow: column wrap;
+            justify-content: space-between;
+            a {
+                img {
+                    height: 50px;
+                    box-shadow: 0px 0px 8px 4px $bg_light_blue;
+                    transition: all 300ms linear;
+                }
+                img:hover {
+                    box-shadow: 0px 0px 15px 8px $bg_light_blue;
                 }
             }
             p {
