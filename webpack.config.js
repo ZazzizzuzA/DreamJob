@@ -12,6 +12,7 @@ module.exports = {
     output: {
         filename: "[name].js",
         path: path.resolve(__dirname, "dist"),
+        publicPath: (__dirname, "dist/"),
     },
     resolve: {
         extensions: [".js", ".json", ".scss", ".css"],
@@ -64,6 +65,8 @@ module.exports = {
             stripPrefix: "dist/"
         }),
         new CopyWebpackPlugin([{ from: 'assets/**/*' }]),
-        // new imagesloaded([ { from: 'assets/**/*' } ])
+        // new webpack.DefinePlugin({
+        //     'process.env.ASSET_PATH': JSON.stringify("/assets/")
+        // })
     ]
 }

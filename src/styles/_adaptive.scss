@@ -391,6 +391,11 @@
                 }
                 #valueOfRates {
                     font-size: 1em;
+                    p {
+                        #resultOfRates {
+                            width: 50%;
+                        }
+                    }
                 }
                 .links {
                     a {
