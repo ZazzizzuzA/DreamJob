@@ -44,10 +44,6 @@ module.exports = {
                 },
                 loader: "url-loader"
             },
-            {
-                test: /\.woff$/,
-                loader: "url-loader"
-            },
         ]
     },
     plugins: [
