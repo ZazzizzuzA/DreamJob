@@ -278,6 +278,7 @@ const imagesLoaded = require('imagesloaded'); {
                 anime(Object.assign(animOpts, animation.opts));
             };
 
+
             this.DOM.letter.addEventListener('click', this.clickFn);
             this.DOM.letter.addEventListener('touchstart', this.clickFn);
         }

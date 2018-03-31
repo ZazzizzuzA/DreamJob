@@ -5,7 +5,7 @@ ol {
     margin: 0;
     padding: 0;
     font-size: 16px;
-    font-family: 'Cormorant', serif !important;
+    font-family: 'no_name_37_Light', serif !important;
 }
 
 @font-face {
@@ -21,4 +21,9 @@ ol {
 @font-face {
     font-family: 'Dorothea Deco';
     src: url("../../dist/assets/fonts/11609.ttf")
+}
+
+@font-face {
+    font-family: 'no_name_37_Light';
+    src: url("../../dist/assets/fonts/11693.otf")
 }

@@ -33,26 +33,24 @@ html {
     }
     .about-me {
         background-repeat: no-repeat;
-        background-size: cover;
+        background-size: 100% 100%;
         background-image: url(../../assets/images/bg1.jpg);
         height: 100vh;
         width: 100%;
-        justify-content: flex-end;
-        align-items: center;
-        @include padding(50px, 20px);
+        justify-content: flex-start;
+        align-items: flex-start;
+        @include padding(50px, 60px);
         .about-me_item {
             position: relative;
             z-index: 10;
-            width: 50%;
+            width: 90%;
             @include padding(20px, 10px);
-            background: rgba(25, 103, 221, 0.8);
-            color: $first-white;
-            box-shadow: 10px 15px 25px $shadow;
+            background: rgba(25, 103, 221, 0);
+            color: rgb(0, 251, 255);
             border-radius: 15px;
             p {
                 text-align: justify;
-                font-weight: 600;
-                font-size: 1.3em;
+                font-size: 1.8em;
             }
         }
         .glass_block-black {
@@ -458,10 +456,9 @@ html {
             a {
                 text-decoration: none;
                 line-height: 55px;
-                font-size: 2em;
+                font-size: 1.8em;
                 @include padding(10px, 15px);
                 cursor: pointer;
-                font-weight: 600;
                 color: $first_white;
                 transition: all .4s ease-out;
                 z-index: 99999;
@@ -494,15 +491,11 @@ html {
             flex-flow: column wrap;
             justify-content: space-around;
             height: 100vh;
-            color: $first_white;
-            font-weight: 500;
             @include padding(0px, 10px);
             span {
-                font-family: 'Dorothea Deco', serif;
                 display: block;
                 align-self: center;
                 text-align: center;
-                text-shadow: -10px 15px 10px $shadow;
                 color: $first_white;
                 font-size: 4em;
                 width: 60%;
