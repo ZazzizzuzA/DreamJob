@@ -19,6 +19,10 @@ var iso = new Isotope(elem, {
     itemSelector: '.grid-item',
     layoutMode: 'fitRows',
     filter: "*",
+    percentPosition: true,
+    masonry: {
+        columnWidth: '400'
+    }
 })
 let butAll = document.getElementById("filters");
 let button = Array.from(butAll.getElementsByTagName("button"));
@@ -30,6 +34,9 @@ button.forEach((item) => {
         })
     }
 });
+
+/*     Меню       */
+
 let icon = document.getElementById('nav-icon');
 icon.addEventListener('click', function openMenu() {
 
@@ -39,10 +46,9 @@ icon.addEventListener('click', function openMenu() {
 
 });
 
-/*      Convector      */
+/*      Converter      */
 
 let payment = document.getElementById('myOwnValue');
-// let cost = document.getElementById('valueOfRates');
 let usd = document.getElementById('usdRatesFrom');
 let eur = document.getElementById('eurRatesFrom');
 let rur = document.getElementById('rurRatesFrom');
@@ -93,7 +99,7 @@ function clickButton() {
 $(document).ready(function() {
     $(".slider-big").owlCarousel({
         items: 1,
-        dots: true,
+        dots: false,
         loop: true,
         animateOut: 'fadeOut',
         animateIn: 'fadeIn',
@@ -183,22 +189,30 @@ $(document).ready(function() {
 
 Chart.defaults.scale.ticks.beginAtZero = true;
 Chart.defaults.global.defaultFontColor = "#3E2723";
+Chart.defaults.global.defaultFontFamily = 'no_name_37_Light';
+Chart.defaults.global.defaultFontSize = 16;
 
 let diagrSkills = document.getElementById('diagram_skills');
 
 let mySkillsChart = new Chart(diagrSkills, {
-    type: "radar",
+    type: "bar",
     data: {
         labels: ["HTML", "CSS", "SCSS/SASS", "PUG", "Webpack", "Vue.js", "Bootstrap", "JavaScript", "jQuery", "GitHub"],
         datasets: [{
-            label: ["Уровень навыка"],
-            data: [80, 80, 70, 80, 50, 60, 40, 60, 50, 80],
-            backgroundColor: "rgba(224, 131, 60, 0.5)",
-            borderColor: "#001dff60",
-            pointRadius: 5,
-            pointBackgroundColor: "rgba(0, 14, 175, 0.5)",
-
-        }],
+                label: ["My skill level"],
+                data: [65, 65, 60, 60, 40, 40, 45, 55, 50, 60],
+                backgroundColor: "rgb(10, 141, 143)",
+                borderColor: "#000",
+                borderWidth: 0.5,
+            },
+            {
+                label: ["Goal"],
+                data: [100, 100, 100, 100, 100, 100, 100, 100, 100, 100],
+                backgroundColor: "rgba(255, 255, 255, 1)",
+                borderColor: "#000",
+                borderWidth: 0.5,
+            }
+        ],
 
     },
     options: {
@@ -211,44 +225,15 @@ let mySkillsChart = new Chart(diagrSkills, {
         },
         title: {
             display: true,
-            text: 'Приблизительный уровень навыков',
+            text: 'My skill level and goals',
             fontColor: "rgb(0, 0, 0)",
-            fontSize: 20,
-            fontFamily: 'Cormorant',
+            fontSize: 24,
+            lineHeight: 5
         },
-    }
-});
-let chartBar = document.getElementById('chartBar');
-new Chart(chartBar, {
-    type: "line",
-    data: {
-        labels: ["Ноябрь 2016", "Декабрь 2016", "Январь 2017", "Февраль 2017", "Март 2017", "Апрель 2017", "Май 2017", "Июнь 2017", "Июль 2017", "Август 2017", "Сентябрь 2017", "Октябрь 2017", "Ноябрь 2017", "Декабрь 2017", "Январь 2018", "Февраль 2018", "Март 2018"],
-        datasets: [{
-            label: "Уровень навык",
-            backgroundColor: "rgba(212, 79, 242, 0.6)",
-            data: [0, 10, 10, 10, 13, 20, 25, 27, 27, 30, 35, 45, 45, 50, 53, 65, 70],
-            pointRadius: 3,
-            pointBackgroundColor: "rgba(91, 167, 229, 0.5)",
-            tension: 0.2,
-            borderColor: "rgba(32, 0, 214, 0.6)",
-            borderWidth: 5,
-
-        }]
-    },
-    options: {
-        legend: {
-            display: true,
-            labels: {
-                fontColor: 'rgb(0, 0, 0)'
-            },
-            position: 'bottom',
-        },
-        title: {
-            display: true,
-            text: 'Прогресс роста с начала изучения',
-            fontColor: "rgb(0, 0, 0)",
-            fontSize: 20,
-            fontFamily: 'Cormorant',
+        scales: {
+            xAxes: [{
+                stacked: true
+            }],
         },
     }
 });

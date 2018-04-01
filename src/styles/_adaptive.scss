@@ -42,7 +42,7 @@
         }
         .block__menu {
             width: 35%;
-            ul {
+            div {
                 a {
                     font-size: 1.2em;
                 }
@@ -176,7 +176,7 @@
         }
         .block__menu {
             width: 35%;
-            ul {
+            div {
                 a {
                     font-size: 1.2em;
                 }
@@ -283,7 +283,7 @@
         .block__menu {
             width: 100%;
             background-color: rgba(25, 103, 221, 0.9);
-            ul {
+            div {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
