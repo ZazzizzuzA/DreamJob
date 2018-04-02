@@ -20,8 +20,8 @@ var iso = new Isotope(elem, {
     layoutMode: 'fitRows',
     filter: "*",
     percentPosition: true,
-    masonry: {
-        columnWidth: '400'
+    fitRows: {
+        gutter: 10
     }
 })
 let butAll = document.getElementById("filters");
@@ -187,7 +187,7 @@ $(document).ready(function() {
 
 /*  Diagrams   */
 
-Chart.defaults.scale.ticks.beginAtZero = true;
+
 Chart.defaults.global.defaultFontColor = "#3E2723";
 Chart.defaults.global.defaultFontFamily = 'no_name_37_Light';
 Chart.defaults.global.defaultFontSize = 16;
@@ -232,8 +232,13 @@ let mySkillsChart = new Chart(diagrSkills, {
         },
         scales: {
             xAxes: [{
-                stacked: true
+                stacked: true,
             }],
-        },
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
     }
 });
