@@ -44,7 +44,9 @@ module.exports = {
                 },
                 loader: "url-loader"
             },
+
         ]
+
     },
     plugins: [
         new HtmlWebpackPlugin({ template: "./index.html" }),

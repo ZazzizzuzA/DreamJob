@@ -27,3 +27,21 @@ ol {
     font-family: 'no_name_37_Light';
     src: url("../../dist/assets/fonts/11693.otf")
 }
+
+@keyframes ripple {
+    0% {
+        box-shadow: 0 0 0 0px rgba(34, 93, 97, 0.4), 0 0 0 0px rgba(35, 52, 61, 0.4);
+    }
+    100% {
+        box-shadow: 0 0 10px 60px rgba(34, 93, 97, 0), 0 0 0 60px rgba(240, 240, 240, 0);
+    }
+}
+
+@keyframes rippleRev {
+    0% {
+        box-shadow: 0 0 10px 60px rgba(36, 77, 90, 0), 0 0 0 60px rgba(240, 240, 240, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0px rgb(47, 51, 54), 0 0 0 0px rgba(28, 58, 75, 1);
+    }
+}

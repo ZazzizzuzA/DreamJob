@@ -5,6 +5,14 @@ import 'owl.carousel';
 import "./controller/ctrl";
 import Isotope from "isotope-layout";
 import Chart from 'chart.js';
+import fontawesome from '@fortawesome/fontawesome';
+import faUser from '@fortawesome/fontawesome-free-solid/';
+import faCircle from '@fortawesome/fontawesome-free-regular/';
+import faFacebook from '@fortawesome/fontawesome-free-brands/';
+
+// fontawesome.library.add(faUser);
+// fontawesome.library.add(faCircle);
+// fontawesome.library.add(faFacebook);
 
 (function() {
     if ("serviceWorker" in navigator) {
