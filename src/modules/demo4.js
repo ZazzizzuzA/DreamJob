@@ -33,8 +33,8 @@ const imagesLoaded = require('imagesloaded'); {
         if (loaded) return;
         loaded = true;
         /* Моя вставка, остальное готовый шаблон с codedrops*/
-        setTimeout(() => { document.getElementById('nav-icon').style = "z-index: 99999; opacity: 1" }, 1000);
-        document.getElementsByClassName('block__menu')[0].style = "z-index: 99998";
+        setTimeout(() => { document.getElementById('nav-icon').style = "z-index: 999; opacity: 1" }, 1000);
+        document.getElementsByClassName('block__menu')[0].style = "z-index: 998";
         Array.from(document.getElementsByClassName('block')).forEach((item) => { item.style = "position: relative" });
 
 

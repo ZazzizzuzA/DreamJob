@@ -9,6 +9,7 @@ import fontawesome from '@fortawesome/fontawesome';
 import faUser from '@fortawesome/fontawesome-free-solid/';
 import faCircle from '@fortawesome/fontawesome-free-regular/';
 import faFacebook from '@fortawesome/fontawesome-free-brands/';
+import { ENGINE_METHOD_PKEY_ASN1_METHS } from 'constants';
 
 // fontawesome.library.add(faUser);
 // fontawesome.library.add(faCircle);
@@ -250,3 +251,54 @@ let mySkillsChart = new Chart(diagrSkills, {
         }
     }
 });
+
+/*  Прокрутка вверх */
+
+let toTop = document.getElementById('ScrollTop'),
+    position,
+    timer;
+
+window.onwheel = function() {
+
+    position = window.pageYOffset;
+    if (position >= 600) {
+        toTop.style.opacity = 0.3;
+        toTop.style.cursor = "pointer";
+        toTop.onmouseover = () => {
+            toTop.style.opacity = 0.9;
+        }
+    }
+    if (position < 600) {
+        toTop.style.opacity = 0;
+        toTop.style.cursor = "default";
+    }
+};
+window.addEventListener("keyup", keyEnd);
+
+function keyEnd() {
+    if (event.keyCode == 35) {
+        position = window.pageYOffset;
+        toTop.style.opacity = 0.3;
+        toTop.style.cursor = "pointer";
+        toTop.onmouseover = () => {
+            toTop.style.opacity = 0.9;
+        }
+        console.log("works");
+    }
+}
+toTop.onclick = function back() {
+
+    if (position > 0) {
+
+        window.scrollTo(0, position);
+        position = position - 50;
+        timer = setTimeout(back, 10);
+
+    } else if (position <= 0) {
+
+        window.scrollTo(0, position);
+        clearTimeout(timer);
+        toTop.style.opacity = 0;
+        toTop.style.cursor = "default";
+    }
+}
